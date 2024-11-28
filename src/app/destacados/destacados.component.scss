@@ -1,0 +1,121 @@
+$bg-color: #F5EBDC;
+$primary-color: #000000; // Color para el texto y elementos importantes
+$cta-bg-color: #D62300; // Fondo del botón de CTA
+$cta-text-color: #FFFFFF; // Color del texto del botón
+$text-color: #502134; // Color del texto principal
+$cookie-bg-color: #FF5733; // Color del botón de cookies
+// Slider container
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    // Pestañas (slides)
+    .slide1 {
+      flex: 1 0 33.33%; // Ocupa 1/3 del ancho
+      text-align: center;
+      padding: 20px;
+      color: #F5EBDC;
+      background-color:  #502314;
+
+      .imagen{
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        width: 80%;
+        max-width: 250px;
+        border-radius: 8px;
+      }
+
+      h2 {
+        margin: 20px 0 10px;
+        font-size: 24px;
+      }
+
+      button {
+        background-color: #333;
+        color: #F5EBDC;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+    .slide2 {
+      flex: 1 0 33.33%; // Ocupa 1/3 del ancho
+      text-align: center;
+      padding: 20px;
+      color: #F5EBDC;
+      background-color:  #d62300;
+
+      img {
+        height: 25vh;
+        width: 70rem;
+        max-width: 250px;
+        border-radius: 8px;
+      }
+
+      h2 {
+        margin: 20px 0 10px;
+        font-size: 24px;
+      }
+
+      button {
+        background-color: #333;
+        color: #F5EBDC;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+    .slide3 {
+      flex: 1 0 33.33%; // Ocupa 1/3 del ancho
+      text-align: center;
+      padding: 20px;
+      color: $text-color;
+      background-color:  #fa0;
+
+      img {
+        width: 80%;
+        max-width: 250px;
+        border-radius: 8px;
+      }
+
+      h2 {
+        margin: 20px 0 10px;
+        font-size: 24px;
+      }
+
+      button {
+        background-color: #333;
+        color: #F5EBDC;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+}

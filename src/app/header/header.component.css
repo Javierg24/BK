@@ -1,0 +1,104 @@
+.navbar {
+  background-color: #F5EBDC;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .container-fluid {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .navbar-brand img {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar .navbar-brand:hover {
+  text-decoration: underline;
+}
+
+.navbar .navbar-toggler {
+  border-radius: 50%;
+  background-color: #502134;
+  border: none;
+}
+
+.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  font-family: "FlameBold";
+  color: #502134;
+  font-size: 1.1rem;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 2px solid #000000;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar .navbar-nav .nav-item button {
+  margin-left: 20px;
+  padding: 10px;
+  background-color: #D62300;
+  border-radius: 12px;
+  border: none;
+  color: white;
+}
+
+.navbar .dropdown-menu {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar .container-fluid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .navbar-nav {
+    flex-direction: column;
+  }
+  .navbar .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+}

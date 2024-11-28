@@ -1,0 +1,118 @@
+
+// Variables de colores
+$bg-color: #F5EBDC;
+$primary-color: #000000; // Color principal
+$text: #502134;
+$text-muted: #adb5bd;
+
+// Estilos generales de la navbar
+.navbar {
+  background-color: $bg-color;
+  padding: 1rem;
+  transition: background-color 0.3s ease; // Suaviza la transición de color
+
+  display: flex; // Usamos flexbox para alinear todo
+  justify-content: center; // Centra el contenido horizontalmente
+  align-items: center; // Centra el contenido verticalmente
+
+  .container-fluid {
+    max-width: 1200px; // Define un ancho máximo para el contenido
+    width: 100%;
+    display: flex;
+    justify-content: space-between; // Espaciado entre logo y menús
+    align-items: center;
+  }
+
+  // Estilos para el logo
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Botón de menú para móviles
+  .navbar-toggler {
+    border-radius: 50%;
+    background-color: $text;
+    border: none;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  // Menú de navegación
+  .navbar-nav {
+    display: flex;
+    justify-content: center; // Centra los elementos horizontalmente
+    align-items: center; // Centra verticalmente
+    list-style: none;
+    margin: 0;
+
+    .nav-item {
+      margin: 0 1rem; // Espaciado horizontal entre elementos
+
+      .nav-link {
+        font-weight: bold;
+        font-family: "FlameBold";
+        color: $text;
+        font-size: 1.1rem;
+
+        &.active {
+          color: $primary-color;
+          font-weight: bold;
+          border-bottom: 2px solid $primary-color;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      // Botón de inicio de sesión
+      button {
+        margin-left: 20px;
+        padding: 10px;
+        background-color: #D62300;
+        border-radius: 12px;
+        border: none;
+        color: white;
+      }
+    }
+  }
+
+  // Dropdown en el menú
+  .dropdown-menu {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  // Ajustes en dispositivos pequeños
+  @media (max-width: 767px) {
+    flex-direction: column; // Coloca los elementos en columna
+
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar-nav {
+      flex-direction: column; // Menú en columna para móviles
+      .nav-item {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
