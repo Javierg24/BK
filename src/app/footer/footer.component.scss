@@ -18,30 +18,32 @@ $text-muted: #888888;          // Separador y texto apagado
     background-color: $background;
     padding: 32px 24px;
     color: $text;
-  }
 
-  .footer-links__container {
-    display: flex;
-    gap: 15px;
+    .footer-links__container {
+      display: flex;
+      flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
+      justify-content: center; /* Asegura que los enlaces estén centrados */
+      gap: 15px;
+      margin-bottom: 20px; /* Un poco de espacio debajo */
 
-    .footer-link {
-
-      font-weight: bold;
-      font-size: 18px;
-      color: $text;
-      text-decoration: none;
-      position: relative;
-
-      &:not(:last-child)::after {
-        content: " | ";
-        color: $text-muted;
-        margin-left: 5px;
+      .footer-link {
         font-weight: bold;
-      }
+        font-size: 18px;
+        color: $text;
+        text-decoration: none;
+        position: relative;
 
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
+        &:not(:last-child)::after {
+          content: " | ";
+          color: $text-muted;
+          margin-left: 5px;
+          font-weight: bold;
+        }
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -54,7 +56,6 @@ $text-muted: #888888;          // Separador y texto apagado
     color: $background;
     text-align: center;
     cursor: pointer;
-
 
     .dropdown-header {
       font-size: 1.5rem;
@@ -72,7 +73,7 @@ $text-muted: #888888;          // Separador y texto apagado
         padding: 0;
 
         li {
-          font-size:1rem;
+          font-size: 1rem;
           color: $primary-color;
 
           &:hover {
@@ -90,20 +91,22 @@ $text-muted: #888888;          // Separador y texto apagado
 
   .footer-bottom {
     display: flex;
-    justify-content: space-around;  // Distribuye los elementos con espacios entre ellos
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #502314;
     padding: 10px;
     text-align: center;
 
     .contact {
-      margin-top : 10px;
+      margin-top: 10px;
       display: flex;
       align-items: center;
       margin-bottom: 10px;
       font-size: 12px;
       color: $text;
 
-      img{
+      img {
         width: 35px;
         height: 35px;
         margin-right: 2%;
@@ -111,29 +114,26 @@ $text-muted: #888888;          // Separador y texto apagado
     }
 
     .rights {
-      margin-top : 20px;
+      margin-top: 20px;
       font-size: 12px;
       color: $text;
-
     }
 
     .social-media {
-      margin-bottom:20px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       margin-top: 10px;
 
-      img{
+      img {
         width: 35px;
         height: 35px;
       }
 
       .social-icon {
-
         display: inline-block;
         margin: 0 5px;
         background-size: cover;
-
       }
 
       a {
@@ -141,5 +141,29 @@ $text-muted: #888888;          // Separador y texto apagado
       }
     }
   }
+}
 
+// Media Queries para pantallas pequeñas
+@media (max-width: 768px) {
+  .footer {
+    .footer-container {
+      padding: 20px; /* Menos espacio en pantallas pequeñas */
+    }
+
+    .footer-links__container {
+      justify-content: flex-start; /* Alineación a la izquierda cuando es necesario */
+      gap: 10px;
+    }
+
+    .footer-bottom {
+      flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
+      align-items: center;
+    }
+
+    .contact,
+    .rights,
+    .social-media {
+      font-size: 14px; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+    }
+  }
 }

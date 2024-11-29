@@ -1,40 +1,41 @@
-
 // Variables de colores
 $bg-color: #F5EBDC;
-$primary-color: #000000; // Color principal
+$primary-color: #000000;
 $text: #502134;
-$text-muted: #adb5bd;
+$button-bg-color: #D62300;
+$button-hover-color: darken($button-bg-color, 10%);
 
-// Estilos generales de la navbar
+// Navbar estilos principales
 .navbar {
   background-color: $bg-color;
   padding: 1rem;
-  transition: background-color 0.3s ease; // Suaviza la transición de color
+  transition: background-color 0.3s ease; // Suaviza la transición al scrollear
+  z-index: 1000; // Asegura que el navbar esté por encima del contenido
+  margin-bottom: 10%;
 
-  display: flex; // Usamos flexbox para alinear todo
-  justify-content: center; // Centra el contenido horizontalmente
-  align-items: center; // Centra el contenido verticalmente
-
-  .container-fluid {
-    max-width: 1200px; // Define un ancho máximo para el contenido
+  &.fixed-top {
+    position: fixed;
+    top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between; // Espaciado entre logo y menús
-    align-items: center;
   }
 
-  // Estilos para el logo
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; // Ancho máximo para mantener el contenido centrado
+    margin: auto;
+  }
+
+  // Logo del navbar
   .navbar-brand {
     display: flex;
     align-items: center;
-    text-align: center;
-    color: $primary-color;
-    font-size: 1.5rem;
-    font-weight: bold;
 
     img {
-      width: 100px;
-      height: 100px;
+      width: 100px; // Ajusta el tamaño del logo
+      height: auto; // Mantiene la proporción del logo
+      object-fit: contain; // Evita distorsiones en la imagen
     }
 
     &:hover {
@@ -42,37 +43,42 @@ $text-muted: #adb5bd;
     }
   }
 
-  // Botón de menú para móviles
+  // Botón toggler (para dispositivos móviles)
   .navbar-toggler {
-    border-radius: 50%;
+    border-radius: 60%;
     background-color: $text;
     border: none;
+
     &:focus {
       outline: none;
       box-shadow: none;
     }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
   }
 
-  // Menú de navegación
+  // Elementos de navegación
   .navbar-nav {
     display: flex;
-    justify-content: center; // Centra los elementos horizontalmente
-    align-items: center; // Centra verticalmente
-    list-style: none;
-    margin: 0;
+    flex-wrap: nowrap; // Evita que las palabras se desplacen a la siguiente línea
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap; // Fuerza las palabras a mantenerse en una línea
+    overflow-x: auto; // Añade desplazamiento horizontal si es necesario
 
     .nav-item {
-      margin: 0 1rem; // Espaciado horizontal entre elementos
+      margin: 0 1rem; // Espaciado horizontal
 
       .nav-link {
+        font-family: "FlameRegular";
         font-weight: bold;
-        font-family: "FlameBold";
-        color: $text;
         font-size: 1.1rem;
+        color: $text;
 
         &.active {
           color: $primary-color;
-          font-weight: bold;
           border-bottom: 2px solid $primary-color;
         }
 
@@ -81,38 +87,59 @@ $text-muted: #adb5bd;
         }
       }
 
-      // Botón de inicio de sesión
+      // Botón "Iniciar Sesión"
       button {
-        margin-left: 20px;
-        padding: 10px;
-        background-color: #D62300;
+
+        padding: 10px 20px;
+        background-color: $button-bg-color;
         border-radius: 12px;
         border: none;
-        color: white;
+        font-weight: bold;
+
+        a{
+          color: $bg-color;
+          text-decoration: none;
+        }
+
+        &:hover {
+          background-color: $button-hover-color;
+        }
+      }
+    }
+
+    // Dropdown del menú
+    .dropdown-menu {
+      background-color: $bg-color;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+      .dropdown-item {
+        color: $text;
+        font-weight: bold;
+
+        &:hover {
+          background-color: lighten($bg-color, 10%);
+        }
       }
     }
   }
+}
 
-  // Dropdown en el menú
-  .dropdown-menu {
-    text-align: center;
-    padding: 1rem;
-  }
+// Ajuste para que el header no se "coma" la parte inferior al reducir el tamaño de la ventana
+header {
+  margin-top: 0; // Elimina cualquier margen superior adicional
+  min-height: 70px; // Se asegura de que el encabezado tenga un mínimo de altura
+}
 
-  // Ajustes en dispositivos pequeños
-  @media (max-width: 767px) {
-    flex-direction: column; // Coloca los elementos en columna
+// Media queries para dispositivos móviles
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column; // Cambia a disposición vertical
+    align-items: center;
 
-    .container-fluid {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .navbar-nav {
-      flex-direction: column; // Menú en columna para móviles
-      .nav-item {
-        margin: 0.5rem 0;
-      }
+    .nav-item {
+      margin: 0.5rem 0; // Ajusta los márgenes
     }
   }
 }

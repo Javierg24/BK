@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* Variables */
+/* Mixins */
+/* Estilos generales para el contenedor */
+.login-container {
+  display: flex;
+  height: 60vh;
+  background-color: #F5EBDC;
+  margin-top: 150px;
+  justify-content: space-between;
+  /* Asegura que haya espacio entre los elementos */
+  /* Hacer que el contenido se ajuste correctamente a pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    /* Cambiar a columna en pantallas más pequeñas */
+    height: auto;
+    /* Deja que la altura se ajuste al contenido */
+    margin-top: 20px;
+    /* Reduce el margen superior en pantallas pequeñas */
+  }
+}
+
+/* Imagen */
+.login-image {
+  flex: 1;
+  /* Ocupa el 50% del ancho */
+}
+
+.login-image img {
+  border-radius: 20px;
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 60%;
+  /* Hace que la imagen ocupe todo el ancho de su contenedor */
+  height: 50%;
+  /* Asegura que la imagen ocupe toda la altura */
+  object-fit: cover;
+  /* Mantiene la relación de aspecto sin distorsionar */
+  /* Hacer que la imagen sea más flexible en pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+  .login-image img {
+    width: 80%;
+    /* Reduce el ancho de la imagen en pantallas pequeñas */
+    height: 40%;
+    /* Mantiene la altura para que no distorsione */
+    margin-left: 10%;
+    /* Centra la imagen */
+  }
+}
+
+/* Formulario de login */
+.login-form {
+  width: 100%;
+  flex: 1;
+  /* Ocupa el 50% del ancho */
+  background-color: #F5EBDC;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-family: "FlameBold";
+  color: #502134;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.login-form .social-login {
+  display: block;
+  /* Cambiar de flex a block para apilar los botones */
+  margin-bottom: 20px;
+  /* Margen entre los botones y el resto del formulario */
+}
+
+.login-form .social-login button {
+  text-align: justify;
+  width: 70%;
+  /* Hacer los botones del 100% del ancho */
+  margin-bottom: 10px;
+  /* Margen entre los botones */
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 24px, 24px, 24px, 24px;
+  cursor: pointer;
+}
+
+.login-form .social-login button img {
+  margin-right: 5px;
+}
+
+.login-form .email-login {
+  margin-bottom: 20px;
+  /* Margen entre el formulario de login y los textos */
+}
+
+.login-form .email-login input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  /* Espacio entre los campos de texto */
+  border: 1px solid #F5EBDC;
+  border-radius: 24px;
+}
+
+.login-form .email-login button {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #D62300;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 24px, 24px, 24px, 24px;
+  cursor: pointer;
+}
+
+.login-form .email-login a {
+  font-weight: bold;
+  margin-top: 2%;
+  color: #502134;
+}
+
+.login-form .slogan {
+  margin-top: 20px;
+  /* Margen para separar del contenido anterior */
+}
+
+.login-form .slogan h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.login-form .slogan p {
+  margin-bottom: 20px;
+}
+
+.login-form .slogan button {
+  border-radius: 24px;
+  border-style: none;
+  background-color: #ff8732;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 24px, 24px, 24px, 24px;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Asegura que los botones y campos de entrada se ajusten en pantallas más pequeñas */
+  .login-form, .login-image {
+    width: 100%;
+    /* Los elementos ocupan el 100% en pantallas más pequeñas */
+    text-align: center;
+    padding: 15px;
+  }
+  .social-login button, .email-login input, .email-login button {
+    width: 90%;
+    /* Ajusta los tamaños de los botones y campos de texto */
+    margin-bottom: 15px;
+    /* Agrega espacio entre los botones y los campos */
+  }
+  /* La imagen ocupa el 80% de la pantalla en móviles */
+  .login-image img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}

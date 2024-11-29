@@ -1,9 +1,9 @@
 $bg-color: #F5EBDC;
-$primary-color: #000000; // Color para el texto y elementos importantes
-$cta-bg-color: #D62300; // Fondo del botón de CTA
-$cta-text-color: #FFFFFF; // Color del texto del botón
-$text-color: #502134; // Color del texto principal
-$cookie-bg-color: #FF5733; // Color del botón de cookies
+$primary-color: #000000;
+$cta-bg-color: #D62300;
+$cta-text-color: #FFFFFF;
+$text-color: #502134;
+
 // Slider container
 .slider-container {
   width: 100%;
@@ -14,108 +14,83 @@ $cookie-bg-color: #FF5733; // Color del botón de cookies
     display: flex;
     transition: transform 0.5s ease-in-out;
 
-    // Pestañas (slides)
+    // General styles for all slides
+    > div {
+      flex: 1 0 33.33%; // Cada slide ocupa 1/3 del ancho
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; // Ajustado para que el contenido empuje hacia arriba
+      align-items: center;
+      height: 70vh; // Ajuste del alto general para una vista completa
+
+      .imagen {
+        width: 70%; // Imagen ocupa el 80% del contenedor
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 90%;
+          height: 70%;
+          object-fit: contain;
+          border-radius: 8px;
+        }
+      }
+
+      h2 {
+        font-family: "FlameRegular";
+        font-weight: bold;
+        margin: 15px 0; // Añadido margen debajo de la imagen
+        font-size: 24px;
+
+        &.titulobeige {
+          color: $bg-color;
+        }
+
+        &.titulodark {
+          color: $text-color;
+        }
+      }
+
+      button {
+        font-family: "FlameSans";
+        border: none;
+        padding: 15px 25px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 12%;
+        width: 50%;
+        height: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        align-self: center; // Alinea el botón al centro horizontalmente
+      }
+
+      .botonclaro{
+        background-color: $bg-color;
+        color: $text-color;
+      }
+
+      .botonoscuro{
+        background-color: $text-color;
+        color: $bg-color;
+      }
+    }
+
+    // Estilos específicos para cada slide
     .slide1 {
-      flex: 1 0 33.33%; // Ocupa 1/3 del ancho
-      text-align: center;
-      padding: 20px;
-      color: #F5EBDC;
-      background-color:  #502314;
-
-      .imagen{
-        width: 100%;
-        height: 100%;
-      }
-
-      img {
-        width: 80%;
-        max-width: 250px;
-        border-radius: 8px;
-      }
-
-      h2 {
-        margin: 20px 0 10px;
-        font-size: 24px;
-      }
-
-      button {
-        background-color: #333;
-        color: #F5EBDC;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-
-        &:hover {
-          background-color: #555;
-        }
-      }
+      background-color: #502314;
     }
+
     .slide2 {
-      flex: 1 0 33.33%; // Ocupa 1/3 del ancho
-      text-align: center;
-      padding: 20px;
-      color: #F5EBDC;
-      background-color:  #d62300;
-
-      img {
-        height: 25vh;
-        width: 70rem;
-        max-width: 250px;
-        border-radius: 8px;
-      }
-
-      h2 {
-        margin: 20px 0 10px;
-        font-size: 24px;
-      }
-
-      button {
-        background-color: #333;
-        color: #F5EBDC;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-
-        &:hover {
-          background-color: #555;
-        }
-      }
+      background-color: $cta-bg-color;
     }
+
     .slide3 {
-      flex: 1 0 33.33%; // Ocupa 1/3 del ancho
-      text-align: center;
-      padding: 20px;
-      color: $text-color;
-      background-color:  #fa0;
-
-      img {
-        width: 80%;
-        max-width: 250px;
-        border-radius: 8px;
-      }
-
-      h2 {
-        margin: 20px 0 10px;
-        font-size: 24px;
-      }
-
-      button {
-        background-color: #333;
-        color: #F5EBDC;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-
-        &:hover {
-          background-color: #555;
-        }
-      }
+      background-color: #fa0;
     }
   }
 }

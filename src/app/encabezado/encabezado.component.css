@@ -2,6 +2,7 @@
   position: relative;
   height: 70vh;
   background-color: #F5EBDC;
+  margin-top: 100px;
 }
 
 .home-banner__hero {
@@ -33,7 +34,7 @@
 
 .home-banner__title {
   width: 60%;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-family: "FlameBold", sans-serif;
   font-weight: bold;
   color: #502134;
@@ -46,7 +47,7 @@
   margin-top: 5%;
   border: none;
   font-family: "FlameSans", sans-serif;
-  width: 22%;
+  width: 28%;
   display: flex;
   align-items: center;
   background-color: #D62300;

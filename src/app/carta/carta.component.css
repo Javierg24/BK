@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* Variables */
+/* Estilo general para la carta */
+.carta {
+  margin-top: 170px;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 10%;
+}
+
+.carta h1 {
+  margin-left: 10%;
+  width: 80%;
+  font-size: 3;
+  font-family: "FlameBold", sans-serif;
+  font-weight: bold;
+  color: #502134;
+  font-size: 4em;
+  margin-bottom: 40px;
+}
+
+/* Contenedor del menú */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: 10%;
+  gap: 20px;
+  /* Espacio entre los elementos */
+}
+
+.menu-container .menu-item {
+  width: 250px;
+  /* Ancho fijo para los items */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #F5EBDC;
+  /* Fondo del item */
+  /* Imagen */
+  /* Efecto hover en la imagen */
+  /* Nombre del menú */
+}
+
+.menu-container .menu-item .menu-item-image {
+  width: 100%;
+  height: 200px;
+}
+
+.menu-container .menu-item img {
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  height: 80%;
+  /* Fijo para las imágenes */
+  background-color: #F5EBDC;
+  /* Fondo de la imagen */
+  transition: transform 0.3s ease;
+  /* Transición para el hover */
+}
+
+.menu-container .menu-item:hover img {
+  transform: scale(1.1);
+  /* Amplía la imagen */
+}
+
+.menu-container .menu-item p {
+  margin-left: 2%;
+  margin-bottom: 2%;
+  border-end-start-radius: 10px;
+  border-end-end-radius: 10px;
+  width: 96%;
+  background-color: #fff;
+  /* Fondo blanco debajo de la imagen */
+  padding: 10px;
+  font-family: "FlameSans";
+  font-weight: bold;
+  font-size: 16px;
+  color: #502134;
+  text-transform: capitalize;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .menu-container {
+    justify-content: center;
+  }
+  .menu-item {
+    width: 100%;
+    /* Para pantallas pequeñas, los items ocuparán todo el ancho */
+    margin-bottom: 20px;
+  }
+}

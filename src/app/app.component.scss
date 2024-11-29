@@ -1,1 +1,39 @@
 
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  padding-top: 100px; /* Ajusta este valor según la altura real del navbar */
+  background-color: #F5EBDC;
+}
+
+// Declaración de la primera fuente (FlameRegular)
+@font-face {
+  font-family: 'FlameRegular';  /* Nombre de la fuente */
+  src: url('../assets/fonts/FlameRegular.otf') format('opentype'); /* Ruta del archivo OTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Declaración de la segunda fuente (AnotherFont)
+@font-face {
+  font-family: 'FlameBold';  /* Nombre de la fuente */
+  src: url('../assets/fonts/FlameBold.otf') format('opentype'); /* Ruta del archivo OTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Declaración de la tercera fuente (CustomFont)
+@font-face {
+  font-family: 'FlameSans';  /* Nombre de la fuente */
+  src: url('../assets/fonts/FlameSans.otf') format('opentype'); /* Ruta del archivo OTF */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FlameCondensed';  /* Nombre de la fuente */
+  src: url('../assets/fonts/FlameCondensed.otf') format('opentype'); /* Ruta del archivo OTF */
+  font-weight: normal;
+  font-style: normal;
+}
