@@ -9,6 +9,7 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { DestacadosComponent } from './destacados/destacados.component';
 import { CartaComponent } from './carta/carta.component';
 import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     EncabezadoComponent,
     DestacadosComponent,
     CartaComponent,
-    LoginComponent
+    LoginComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

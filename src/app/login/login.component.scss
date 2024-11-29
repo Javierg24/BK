@@ -1,150 +1,155 @@
 /* Variables */
+
 $primary-color: #F5EBDC;
-$secondary-color:  #502134;
+$secondary-color: #502134;
 $cta-bg-color: #D62300; // Fondo del botón de CTA
 
-
 /* Mixins */
+
 @mixin button-style($background-color, $color) {
-  background-color: $background-color;
-  color: $color;
-  padding: 10px 20px;
-  border-radius: 24px, 24px, 24px, 24px;
-  cursor: pointer;
+    background-color: $background-color;
+    color: $color;
+    padding: 10px 20px;
+    border-radius: 24px, 24px, 24px, 24px;
+    cursor: pointer;
 }
+
 
 /* Estilos generales para el contenedor */
-.login-container {
-  display: flex;
-  height: 60vh;
-  background-color: $primary-color;
-  margin-top: 150px;
-  justify-content: space-between; /* Asegura que haya espacio entre los elementos */
 
-  /* Hacer que el contenido se ajuste correctamente a pantallas pequeñas */
-  @media (max-width: 768px) {
-    flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
-    height: auto; /* Deja que la altura se ajuste al contenido */
-    margin-top: 20px; /* Reduce el margen superior en pantallas pequeñas */
-  }
+.login-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    /* Asegura que el contenedor ocupa toda la altura de la ventana */
+    background-color: $primary-color;
+    padding-top: 150px;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+    }
 }
+
 
 /* Imagen */
-.login-image {
-  flex: 1; /* Ocupa el 50% del ancho */
-  img {
-    border-radius: 20px;
-    margin-left: 20%;
-    margin-top: 10%;
-    width: 60%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
-    height: 50%; /* Asegura que la imagen ocupe toda la altura */
-    object-fit: cover; /* Mantiene la relación de aspecto sin distorsionar */
 
-    /* Hacer que la imagen sea más flexible en pantallas pequeñas */
-    @media (max-width: 768px) {
-      width: 80%; /* Reduce el ancho de la imagen en pantallas pequeñas */
-      height: 40%; /* Mantiene la altura para que no distorsione */
-      margin-left: 10%; /* Centra la imagen */
+.login-image {
+    flex: 1;
+    /* Ocupa el 50% del ancho */
+    img {
+        border-radius: 20px;
+        margin-left: 20%;
+        margin-top: 10%;
+        width: 60%;
+        height: 50%;
+        object-fit: cover;
+        @media (max-width: 768px) {
+            width: 80%;
+            height: 40%;
+            margin-left: 10%;
+        }
     }
-  }
 }
+
 
 /* Formulario de login */
+
 .login-form {
-  width: 100%;
-  flex: 1; /* Ocupa el 50% del ancho */
-  background-color: $primary-color;
-  padding: 20px;
-  text-align: center;
-
-  h2 {
-    font-family: "FlameBold";
-    color: $secondary-color;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .social-login {
-    display: block; /* Cambiar de flex a block para apilar los botones */
-    margin-bottom: 20px; /* Margen entre los botones y el resto del formulario */
-
-    button {
-      text-align: justify;
-      width: 70%; /* Hacer los botones del 100% del ancho */
-      margin-bottom: 10px; /* Margen entre los botones */
-      border-radius: 20px;
-      @include button-style(white, black);
-
-      img {
-        margin-right: 5px;
-      }
+    width: 100%;
+    flex: 1;
+    background-color: $primary-color;
+    padding: 2rem;
+    text-align: center;
+    h2 {
+        font-family: "FlameBold";
+        color: $secondary-color;
+        font-size: 24px;
+        margin-bottom: 2%;
     }
-  }
-
-  .email-login {
-    margin-bottom: 20px; /* Margen entre el formulario de login y los textos */
-
-    input {
-      width: 70%;
-      padding: 10px;
-      margin-bottom: 10px; /* Espacio entre los campos de texto */
-      border: 1px solid $primary-color;
-      border-radius: 24px;
+    .social-login {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        button {
+            width: 70%;
+            text-align: justify;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 2%;
+            border-radius: 20px;
+            @include button-style(white, black);
+            img {
+                margin-right: 5px;
+            }
+        }
     }
-
-    button {
-      width: 70%;
-      margin-left: 15%;
-      margin-right: 15%;
-      border-radius: 20px;
-      border-style: none;
-      @include button-style($cta-bg-color, #fff);
+    .email-login {
+        margin-bottom: 2%;
+        input {
+            width: 70%;
+            padding: 2%;
+            margin-bottom: 2%;
+            border: 1px solid $primary-color;
+            border-radius: 24px;
+        }
+        button {
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            border-radius: 20px;
+            border-style: none;
+            @include button-style($cta-bg-color, #fff);
+        }
+        a {
+            font-weight: bold;
+            margin-top: 2%;
+            color: $secondary-color;
+        }
     }
-
-    a {
-      font-weight: bold;
-      margin-top: 2%;
-      color: $secondary-color;
+    .slogan {
+        margin-top: 20px;
+        /* Margen para separar del contenido anterior */
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        button {
+            border-radius: 24px;
+            border-style: none;
+            @include button-style(#ff8732, #fff);
+        }
     }
-  }
-
-  .slogan {
-    margin-top: 20px; /* Margen para separar del contenido anterior */
-
-    h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-bottom: 20px;
-    }
-
-    button {
-      border-radius: 24px;
-      border-style: none;
-      @include button-style(#ff8732, #fff);
-    }
-  }
 }
 
+
 /* Media Queries */
+
 @media (max-width: 768px) {
-  /* Asegura que los botones y campos de entrada se ajusten en pantallas más pequeñas */
-  .login-form, .login-image {
-    width: 100%; /* Los elementos ocupan el 100% en pantallas más pequeñas */
-    text-align: center;
-    padding: 15px;
-  }
-
-  .social-login button, .email-login input, .email-login button {
-    width: 90%; /* Ajusta los tamaños de los botones y campos de texto */
-    margin-bottom: 15px; /* Agrega espacio entre los botones y los campos */
-  }
-
-  /* La imagen ocupa el 80% de la pantalla en móviles */
-  .login-image img {
-    width: 80%;
-    margin-left: 10%;
-  }
+    /* Asegura que los botones y campos de entrada se ajusten en pantallas más pequeñas */
+    .login-form,
+    .login-image {
+        width: 100%;
+        /* Los elementos ocupan el 100% en pantallas más pequeñas */
+        text-align: center;
+        padding: 2%;
+    }
+    .social-login button,
+    .email-login input,
+    .email-login button {
+        width: 90%;
+        /* Ajusta los tamaños de los botones y campos de texto */
+        margin-bottom: 2%;
+        /* Agrega espacio entre los botones y los campos */
+    }
+    /* La imagen ocupa el 80% de la pantalla en móviles */
+    .login-image img {
+        width: 80%;
+        margin-left: 10%;
+    }
 }

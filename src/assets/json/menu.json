@@ -1,0 +1,185 @@
+{
+    "categorias": [{
+            "nombre": "Novedades",
+            "productos": [{
+                    "nombre": "Big King",
+                    "descripcion": "Hamburguesa doble con salsa especial y queso.",
+                    "precio": 5.99
+                },
+                {
+                    "nombre": "BK Melt",
+                    "descripcion": "Hamburguesa con queso y cebolla caramelizada.",
+                    "precio": 6.49
+                }
+            ]
+        },
+        {
+            "nombre": "Menú Parrilla",
+            "productos": [{
+                    "nombre": "Whopper",
+                    "descripcion": "Hamburguesa a la parrilla con vegetales frescos.",
+                    "precio": 6.99
+                },
+                {
+                    "nombre": "Double Whopper",
+                    "descripcion": "Versión doble del clásico Whopper.",
+                    "precio": 7.99
+                }
+            ]
+        },
+        {
+            "nombre": "Menú de Pollo",
+            "productos": [{
+                    "nombre": "Crispy Chicken",
+                    "descripcion": "Hamburguesa de pollo crujiente con lechuga y mayonesa.",
+                    "precio": 5.49
+                },
+                {
+                    "nombre": "Chicken Royale",
+                    "descripcion": "Pollo empanado con lechuga y salsa especial.",
+                    "precio": 5.99
+                }
+            ]
+        },
+        {
+            "nombre": "King Jr",
+            "productos": [{
+                    "nombre": "Hamburguesa King Jr",
+                    "descripcion": "Hamburguesa pequeña para niños con queso y ketchup.",
+                    "precio": 3.99
+                },
+                {
+                    "nombre": "Nuggets King Jr",
+                    "descripcion": "6 nuggets de pollo con patatas y bebida.",
+                    "precio": 4.49
+                }
+            ]
+        },
+        {
+            "nombre": "100% Vegetariano",
+            "productos": [{
+                    "nombre": "Plant-Based Whopper",
+                    "descripcion": "Whopper elaborado con carne vegetal.",
+                    "precio": 6.99
+                },
+                {
+                    "nombre": "Vegan Royale",
+                    "descripcion": "Versión vegana del clásico Chicken Royale.",
+                    "precio": 5.99
+                }
+            ]
+        },
+        {
+            "nombre": "Sin gluten",
+            "productos": [{
+                    "nombre": "Whopper sin gluten",
+                    "descripcion": "Versión sin gluten del clásico Whopper.",
+                    "precio": 7.49
+                },
+                {
+                    "nombre": "Chicken Royale sin gluten",
+                    "descripcion": "Hamburguesa de pollo apta para celíacos.",
+                    "precio": 6.49
+                }
+            ]
+        },
+        {
+            "nombre": "Hamburguesas",
+            "productos": [{
+                    "nombre": "Cheeseburger",
+                    "descripcion": "Hamburguesa con queso y ketchup.",
+                    "precio": 2.99
+                },
+                {
+                    "nombre": "Bacon King",
+                    "descripcion": "Hamburguesa con bacon crujiente y queso.",
+                    "precio": 6.99
+                }
+            ]
+        },
+        {
+            "nombre": "Complementos",
+            "productos": [{
+                    "nombre": "Patatas fritas",
+                    "descripcion": "Crujientes y doradas patatas fritas.",
+                    "precio": 2.49
+                },
+                {
+                    "nombre": "Aros de cebolla",
+                    "descripcion": "Aros de cebolla rebozados y crujientes.",
+                    "precio": 2.99
+                }
+            ]
+        },
+        {
+            "nombre": "Postres",
+            "productos": [{
+                    "nombre": "Sundae de chocolate",
+                    "descripcion": "Helado con salsa de chocolate.",
+                    "precio": 2.99
+                },
+                {
+                    "nombre": "Tarta de manzana",
+                    "descripcion": "Deliciosa tarta caliente de manzana.",
+                    "precio": 1.99
+                }
+            ]
+        },
+        {
+            "nombre": "King Ahorro",
+            "productos": [{
+                    "nombre": "Hamburguesa doble",
+                    "descripcion": "Pequeña hamburguesa con doble carne y queso.",
+                    "precio": 1.99
+                },
+                {
+                    "nombre": "Nuggets",
+                    "descripcion": "6 nuggets con salsa.",
+                    "precio": 2.49
+                }
+            ]
+        },
+        {
+            "nombre": "Salsas",
+            "productos": [{
+                    "nombre": "Salsa BBQ",
+                    "descripcion": "Clásica salsa barbacoa.",
+                    "precio": 0.49
+                },
+                {
+                    "nombre": "Salsa Curry",
+                    "descripcion": "Salsa con un toque exótico de curry.",
+                    "precio": 0.49
+                }
+            ]
+        },
+        {
+            "nombre": "Bebidas",
+            "productos": [{
+                    "nombre": "Coca-Cola",
+                    "descripcion": "Refresco de cola clásico.",
+                    "precio": 2.49
+                },
+                {
+                    "nombre": "Agua mineral",
+                    "descripcion": "Botella de agua fresca.",
+                    "precio": 1.99
+                }
+            ]
+        },
+        {
+            "nombre": "Ensaladas",
+            "productos": [{
+                    "nombre": "Ensalada César",
+                    "descripcion": "Ensalada con lechuga, croutons y salsa César.",
+                    "precio": 4.99
+                },
+                {
+                    "nombre": "Ensalada mixta",
+                    "descripcion": "Lechuga, tomate, zanahoria y maíz.",
+                    "precio": 3.99
+                }
+            ]
+        }
+    ]
+}

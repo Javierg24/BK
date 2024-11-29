@@ -7,7 +7,6 @@
   background-color: white;
   margin-bottom: 10%;
 }
-
 .carta h1 {
   margin-left: 10%;
   width: 80%;
@@ -28,24 +27,21 @@
   gap: 20px;
   /* Espacio entre los elementos */
 }
-
 .menu-container .menu-item {
   width: 250px;
   /* Ancho fijo para los items */
   border-radius: 8px;
   overflow: hidden;
   background-color: #F5EBDC;
-  /* Fondo del item */
+  cursor: pointer;
   /* Imagen */
   /* Efecto hover en la imagen */
   /* Nombre del menú */
 }
-
 .menu-container .menu-item .menu-item-image {
   width: 100%;
   height: 200px;
 }
-
 .menu-container .menu-item img {
   margin-top: 5%;
   margin-left: 10%;
@@ -57,12 +53,10 @@
   transition: transform 0.3s ease;
   /* Transición para el hover */
 }
-
 .menu-container .menu-item:hover img {
   transform: scale(1.1);
   /* Amplía la imagen */
 }
-
 .menu-container .menu-item p {
   margin-left: 2%;
   margin-bottom: 2%;
@@ -89,4 +83,4 @@
     /* Para pantallas pequeñas, los items ocuparán todo el ancho */
     margin-bottom: 20px;
   }
-}
+}/*# sourceMappingURL=carta.component.css.map */

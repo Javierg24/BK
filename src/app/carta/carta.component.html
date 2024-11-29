@@ -1,12 +1,11 @@
-
 <div class="carta">
-  <h1>Hola, ¿qué quieres comer hoy?</h1>
-  <div class="menu-container">
-    <div *ngFor="let item of menuItems" class="menu-item">
-      <div class="menu-item-image">
-        <img [src]="item.foto" alt="{{ item.nombre }}">
-      </div>
-      <p>{{ item.nombre }}</p>
+    <h1>Hola, ¿qué quieres comer hoy?</h1>
+    <div class="menu-container">
+        <div *ngFor="let item of menuItems" class="menu-item" [routerLink]="['/menu']">
+            <div class="menu-item-image">
+                <img [src]="item.foto" alt="{{ item.nombre }}">
+            </div>
+            <p>{{ item.nombre }}</p>
+        </div>
     </div>
-  </div>
 </div>
