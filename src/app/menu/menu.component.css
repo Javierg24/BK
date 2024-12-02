@@ -1,132 +1,98 @@
-@charset "UTF-8";
-/* Variables */
 .menu-container {
-  margin-top: 50px;
-  /* Colocar las categorías justo debajo de nav */
-  display: flex;
-  flex-direction: column;
+  margin-top: 150px;
   padding: 20px;
-  width: 100%;
-  /* Aseguramos que ocupe todo el ancho disponible */
-  /* Categorías */
-  /* Productos */
 }
 
 .menu-container h1 {
-  font-size: 4em;
-  font-family: "FlameBold", sans-serif;
-  font-weight: bold;
-  color: #502134;
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .menu-container .categorias {
   display: flex;
-  /* Esto asegura que los items estén en fila */
-  justify-content: start;
-  /* Alineamos las categorías a la izquierda */
-  align-items: center;
-  /* Alineamos las categorías verticalmente en el centro */
-  gap: 10px;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto 20px auto;
   padding: 10px 0;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #502134;
-  overflow-x: auto;
-  /* Permite el desplazamiento horizontal si es necesario */
-  /* Para ocultar la barra de desplazamiento */
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE y Edge */
 }
 
-.menu-container .categorias::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari y Opera */
+.menu-container .categorias ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
 }
 
-.menu-container .categorias .categoria-item {
-  flex: 0 0 auto;
-  /* Evita que los elementos se estiren */
+.menu-container .categorias ul li {
+  margin-right: 2%;
+  cursor: pointer;
   text-align: center;
-  border: 2px solid #502134;
-  border-radius: 10px;
-  padding: 5px;
-  font-family: "FlameSans", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  color: #502134;
-  background-color: #f5ebdc;
-  transition: all 0.3s ease;
-  width: 120px;
-  /* Ajuste de ancho para las categorías */
-  /* Imagen más pequeña */
+  flex: 1;
 }
 
-.menu-container .categorias .categoria-item img {
-  width: 50%;
-  /* Tamaño de las imágenes ajustado */
-  height: 50%;
+.menu-container .categorias ul li:hover {
+  border-bottom: #502134;
+}
+
+.menu-container .categorias ul li.selected {
+  border-bottom: 3px solid #502134;
+}
+
+.menu-container .categorias ul li img {
+  width: 80px;
+  height: 80px;
   object-fit: cover;
-  margin-bottom: 5px;
-  border-radius: 50%;
-  border: 2px solid #502134;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
-.menu-container .categorias .categoria-item:hover, .menu-container .categorias .categoria-item.selected {
-  background-color: #502134;
-  color: #fff;
-  border-color: #fff;
-}
-
-.menu-container .categorias .categoria-item p {
-  margin-top: 5px;
-  font-size: 10px;
-  /* Texto más pequeño */
-  text-transform: capitalize;
+.menu-container .categorias ul li p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
 }
 
 .menu-container .productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .menu-container .productos .producto {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  overflow: hidden;
-  background-color: #f5ebdc;
   padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.menu-container .productos .producto h4 {
-  font-family: "FlameBold", sans-serif;
-  font-size: 1.5em;
-  color: #502134;
-  margin-bottom: 10px;
-}
-
-.menu-container .productos .producto p {
-  font-family: "FlameSans", sans-serif;
-  font-size: 1em;
-  color: #502134;
-  margin: 5px 0;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-container .productos .producto:hover {
   transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .menu-container {
-    width: 90%;
-  }
-  .productos {
-    grid-template-columns: 1fr;
-  }
+.menu-container .productos .producto h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.menu-container .productos .producto p {
+  color: #555;
+}
+
+.menu-container .productos .producto .precio {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.menu-container .productos p {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
 }

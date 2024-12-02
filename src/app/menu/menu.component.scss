@@ -1,123 +1,100 @@
-/* Variables */
-$primary-color: #f5ebdc;
 $secondary-color: #502134;
 
 .menu-container {
-  margin-top: 50px; /* Colocar las categorías justo debajo de nav */
-  display: flex;
-  flex-direction: column;
+  margin-top: 150px;
   padding: 20px;
-  width: 100%; /* Aseguramos que ocupe todo el ancho disponible */
 
   h1 {
-    font-size: 4em;
-    font-family: "FlameBold", sans-serif;
-    font-weight: bold;
-    color: $secondary-color;
-    margin-bottom: 20px;
     text-align: center;
-  }
-
-  /* Categorías */
-  .categorias {
-    display: flex; /* Esto asegura que los items estén en fila */
-    justify-content: start; /* Alineamos las categorías a la izquierda */
-    align-items: center; /* Alineamos las categorías verticalmente en el centro */
-    gap: 10px;
-    padding: 10px 0;
     margin-bottom: 20px;
-    border-bottom: 2px solid $secondary-color;
-    overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+  }
 
-    /* Para ocultar la barra de desplazamiento */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE y Edge */
-    &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari y Opera */
-    }
+  .categorias {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;  // Ocupa el 90% del ancho del contenedor
+    margin: 0 auto 20px auto; // Centra las categorías horizontalmente
+    padding: 10px 0;
 
-    .categoria-item {
-      flex: 0 0 auto; /* Evita que los elementos se estiren */
-      text-align: center;
-      border: 2px solid $secondary-color;
-      border-radius: 10px;
-      padding: 5px;
-      font-family: "FlameSans", sans-serif;
-      font-size: 12px;
-      font-weight: bold;
-      color: $secondary-color;
-      background-color: $primary-color;
-      transition: all 0.3s ease;
-      width: 120px; /* Ajuste de ancho para las categorías */
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: nowrap;  // No permite que los elementos se apilen en varias filas
 
-      /* Imagen más pequeña */
-      img {
-        width: 50%; /* Tamaño de las imágenes ajustado */
-        height: 50%;
-        object-fit: cover;
-        margin-bottom: 5px;
-        border-radius: 50%;
-        border: 2px solid $secondary-color;
-        transition: transform 0.3s ease;
-      }
+      li {
+        margin-right: 2%;
+        cursor: pointer;
+        text-align: center;
+        flex: 1;  // Hace que cada categoría ocupe el mismo espacio
 
-      &:hover,
-      &.selected {
-        background-color: $secondary-color;
-        color: #fff;
-        border-color: #fff;
-      }
+        &:hover {
+          border-bottom: $secondary-color;
+        }
 
-      p {
-        margin-top: 5px;
-        font-size: 10px; /* Texto más pequeño */
-        text-transform: capitalize;
+        &.selected {
+          border-bottom: 3px solid $secondary-color;
+        }
+
+        img {
+          width: 80px;  // Ajuste para que las imágenes no sean tan grandes
+          height: 80px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        p {
+          margin-top: 8px;
+          font-weight: bold;
+          color: #333;
+        }
       }
     }
   }
 
-  /* Productos */
   .productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 
     .producto {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
       border-radius: 8px;
-      overflow: hidden;
-      background-color: $primary-color;
       padding: 15px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
 
       h4 {
-        font-family: "FlameBold", sans-serif;
-        font-size: 1.5em;
-        color: $secondary-color;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
         margin-bottom: 10px;
       }
 
       p {
-        font-family: "FlameSans", sans-serif;
-        font-size: 1em;
-        color: $secondary-color;
-        margin: 5px 0;
+        color: #555;
       }
 
-      &:hover {
-        transform: scale(1.05);
+      .precio {
+        font-size: 16px;
+        font-weight: bold;
+        color: #007bff;
       }
     }
   }
-}
 
-/* Media Queries */
-@media (max-width: 768px) {
-  .menu-container {
-    width: 90%;
-  }
-
-  .productos {
-    grid-template-columns: 1fr;
+  .productos p {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
   }
 }
