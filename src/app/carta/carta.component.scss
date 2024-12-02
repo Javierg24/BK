@@ -3,7 +3,6 @@
 $primary-color: #F5EBDC;
 $secondary-color: #502134;
 
-/* Estilo general para la carta */
 
 .carta {
     margin-top: 170px;
@@ -23,7 +22,6 @@ $secondary-color: #502134;
 }
 
 
-/* Contenedor del menú */
 
 .menu-container {
     display: flex;
@@ -31,10 +29,8 @@ $secondary-color: #502134;
     width: 80%;
     margin-left: 10%;
     gap: 20px;
-    /* Espacio entre los elementos */
     .menu-item {
         width: 250px;
-        /* Ancho fijo para los items */
         border-radius: 8px;
         overflow: hidden;
         background-color: $primary-color;
@@ -49,18 +45,12 @@ $secondary-color: #502134;
             margin-left: 10%;
             width: 80%;
             height: 80%;
-            /* Fijo para las imágenes */
             background-color: $primary-color;
-            /* Fondo de la imagen */
             transition: transform 0.3s ease;
-            /* Transición para el hover */
         }
-        /* Efecto hover en la imagen */
         &:hover img {
             transform: scale(1.1);
-            /* Amplía la imagen */
         }
-        /* Nombre del menú */
         p {
             margin-left: 2%;
             margin-bottom: 2%;
@@ -68,7 +58,6 @@ $secondary-color: #502134;
             border-end-end-radius: 10px;
             width: 96%;
             background-color: #fff;
-            /* Fondo blanco debajo de la imagen */
             padding: 10px;
             font-family: "FlameSans";
             font-weight: bold;
@@ -88,7 +77,6 @@ $secondary-color: #502134;
     }
     .menu-item {
         width: 100%;
-        /* Para pantallas pequeñas, los items ocuparán todo el ancho */
         margin-bottom: 20px;
     }
 }

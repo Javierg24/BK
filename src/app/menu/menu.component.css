@@ -1,112 +1,132 @@
 @charset "UTF-8";
 /* Variables */
-/* Contenedor principal */
 .menu-container {
-  margin-top: 100px;
+  margin-top: 50px;
+  /* Colocar las categorías justo debajo de nav */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 20px;
+  width: 100%;
+  /* Aseguramos que ocupe todo el ancho disponible */
   /* Categorías */
   /* Productos */
 }
-.menu-container .categorias {
-  width: 80%;
-  margin-bottom: 20px;
-}
-.menu-container .categorias ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  /* Espacio entre las categorías */
-  justify-content: center;
-}
-.menu-container .categorias li {
-  cursor: pointer;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #F5EBDC;
-  font-family: "FlameSans";
+
+.menu-container h1 {
+  font-size: 4em;
+  font-family: "FlameBold", sans-serif;
   font-weight: bold;
-  font-size: 16px;
+  color: #502134;
+  margin-bottom: 20px;
   text-align: center;
-  transition: background-color 0.3s ease;
 }
-.menu-container .categorias li:hover, .menu-container .categorias li.selected {
-  background-color: #d62300;
-  color: #fff;
-}
-.menu-container .productos {
-  width: 80%;
+
+.menu-container .categorias {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  /* Espacio entre productos */
-  justify-content: center;
-  margin-top: 20px;
+  /* Esto asegura que los items estén en fila */
+  justify-content: start;
+  /* Alineamos las categorías a la izquierda */
+  align-items: center;
+  /* Alineamos las categorías verticalmente en el centro */
+  gap: 10px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #502134;
+  overflow-x: auto;
+  /* Permite el desplazamiento horizontal si es necesario */
+  /* Para ocultar la barra de desplazamiento */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE y Edge */
 }
-.menu-container .productos .producto {
-  width: 250px;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #F5EBDC;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Imagen */
-  /* Detalles del producto */
+
+.menu-container .categorias::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari y Opera */
 }
-.menu-container .productos .producto .producto-imagen {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background-color: #F5EBDC;
+
+.menu-container .categorias .categoria-item {
+  flex: 0 0 auto;
+  /* Evita que los elementos se estiren */
+  text-align: center;
+  border: 2px solid #502134;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "FlameSans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #502134;
+  background-color: #f5ebdc;
+  transition: all 0.3s ease;
+  width: 120px;
+  /* Ajuste de ancho para las categorías */
+  /* Imagen más pequeña */
 }
-.menu-container .productos .producto .producto-imagen img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+
+.menu-container .categorias .categoria-item img {
+  width: 50%;
+  /* Tamaño de las imágenes ajustado */
+  height: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  border: 2px solid #502134;
   transition: transform 0.3s ease;
 }
-.menu-container .productos .producto .producto-imagen img:hover {
-  transform: scale(1.1);
-  /* Efecto de zoom en hover */
+
+.menu-container .categorias .categoria-item:hover, .menu-container .categorias .categoria-item.selected {
+  background-color: #502134;
+  color: #fff;
+  border-color: #fff;
 }
-.menu-container .productos .producto .producto-detalles {
-  padding: 10px;
+
+.menu-container .categorias .categoria-item p {
+  margin-top: 5px;
+  font-size: 10px;
+  /* Texto más pequeño */
+  text-transform: capitalize;
+}
+
+.menu-container .productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-container .productos .producto {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5ebdc;
+  padding: 15px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
-.menu-container .productos .producto .producto-detalles h4 {
+
+.menu-container .productos .producto h4 {
   font-family: "FlameBold", sans-serif;
-  font-size: 18px;
-  color: #502134;
-  margin-bottom: 5px;
-}
-.menu-container .productos .producto .producto-detalles p {
-  font-family: "FlameSans", sans-serif;
-  font-size: 14px;
+  font-size: 1.5em;
   color: #502134;
   margin-bottom: 10px;
 }
-.menu-container .productos .producto .producto-detalles .precio {
+
+.menu-container .productos .producto p {
   font-family: "FlameSans", sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  color: #d62300;
+  font-size: 1em;
+  color: #502134;
+  margin: 5px 0;
 }
 
-/* Media Queries para pantallas pequeñas */
+.menu-container .productos .producto:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .menu-container .categorias ul {
-    flex-direction: column;
-    align-items: center;
+  .menu-container {
+    width: 90%;
   }
-  .menu-container .productos {
-    flex-direction: column;
-    align-items: center;
+  .productos {
+    grid-template-columns: 1fr;
   }
-  .menu-container .producto {
-    width: 100%;
-  }
-}/*# sourceMappingURL=menu.component.css.map */
+}

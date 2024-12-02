@@ -1,26 +1,29 @@
 <div class="menu-container">
-    <!-- Lista de Categorías -->
-    <div class="categorias">
-        <h3>Categorías</h3>
-        <ul>
-            <li *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria.nombre)" [class.selected]="categoriaSeleccionada === categoria.nombre">
-                {{ categoria.nombre }}
-            </li>
-        </ul>
-    </div>
+  <h1>Menú de la Casa</h1>
 
-    <!-- Productos de la Categoría Seleccionada -->
-    <div class="productos" *ngIf="productos.length > 0">
-        <h3>Productos en {{ categoriaSeleccionada }}</h3>
-        <div class="producto" *ngFor="let producto of productos">
-            <h4>{{ producto.nombre }}</h4>
-            <p>{{ producto.descripcion }}</p>
-            <p><strong>Precio:</strong> {{ producto.precio | currency:'EUR' }}</p>
-        </div>
-    </div>
+  <!-- Lista de Categorías -->
+  <div class="categorias">
+    <ul>
+      <li
+        *ngFor="let categoria of categorias"
+        (click)="seleccionarCategoria(categoria.nombre)"
+        [class.selected]="categoriaSeleccionada === categoria.nombre">
+        <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}">
+        {{ categoria.nombre }}
+      </li>
+    </ul>
+  </div>
 
-    <!-- Mensaje si no hay productos -->
-    <div class="productos" *ngIf="productos.length === 0 && categoriaSeleccionada">
-        <p>No hay productos disponibles en esta categoría.</p>
+  <!-- Productos de la Categoría Seleccionada -->
+  <div class="productos" *ngIf="productos.length > 0">
+    <div class="producto" *ngFor="let producto of productos">
+      <h4>{{ producto.nombre }}</h4>
+      <p>{{ producto.descripcion }}</p>
+      <p><strong>Precio:</strong> {{ producto.precio | currency: 'EUR' }}</p>
     </div>
+  </div>
+
+  <div class="productos" *ngIf="productos.length === 0 && categoriaSeleccionada">
+    <p>No hay productos disponibles en esta categoría.</p>
+  </div>
 </div>
