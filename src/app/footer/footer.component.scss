@@ -1,169 +1,151 @@
 // Variables de colores
-$primary-color: #FF5733;       // Rojo llamativo
-$secondary-color: #FFC300;     // Amarillo resaltado
-$background: #502314;          // Fondo principal
-$text: #F5EBDC;                // Texto principal
-$text-muted: #888888;          // Separador y texto apagado
-
+$primary-color: #FF5733; // Rojo llamativo
+$secondary-color: #FFC300; // Amarillo resaltado
+$background: #502314; // Fondo principal
+$text: #F5EBDC; // Texto principal
+$text-muted: #888888; // Separador y texto apagado
 // Estilos generales del footer
 .footer {
-  bottom: 0;
-  width: 100%;
-  margin-top: auto;
-
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $background;
-    padding: 32px 24px;
-    color: $text;
-
-    .footer-links__container {
-      display: flex;
-      flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
-      justify-content: center; /* Asegura que los enlaces estén centrados */
-      gap: 15px;
-      margin-bottom: 20px; /* Un poco de espacio debajo */
-
-      .footer-link {
-        font-weight: bold;
-        font-size: 18px;
-        color: $text;
-        text-decoration: none;
-        position: relative;
-
-        &:not(:last-child)::after {
-          content: " | ";
-          color: $text-muted;
-          margin-left: 5px;
-          font-weight: bold;
-        }
-
-        &:hover {
-          cursor: pointer;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-
-  .footer-dropdown {
+    bottom: 0;
     width: 100%;
-    background-color: #F5EBDC;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: $background;
-    text-align: center;
-    cursor: pointer;
-
-    .dropdown-header {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .dropdown-content {
-      display: none;
-      margin-top: 10px;
-
-      ul {
+    margin-top: auto;
+    .footer-container {
         display: flex;
-        justify-content: space-around;
-        list-style: none;
-        padding: 0;
-
-        li {
-          font-size: 1rem;
-          color: $primary-color;
-
-          &:hover {
-            text-decoration: underline;
-          }
+        flex-direction: column;
+        align-items: center;
+        background-color: $background;
+        padding: 32px 24px;
+        color: $text;
+        .footer-links__container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que los enlaces se envuelvan en pantallas pequeñas */
+            justify-content: center;
+            /* Asegura que los enlaces estén centrados */
+            gap: 15px;
+            margin-bottom: 20px;
+            /* Un poco de espacio debajo */
+            .footer-link {
+                font-weight: bold;
+                font-size: 18px;
+                color: $text;
+                text-decoration: none;
+                position: relative;
+                &:not(:last-child)::after {
+                    content: " | ";
+                    color: $text-muted;
+                    margin-left: 5px;
+                    font-weight: bold;
+                }
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
         }
-      }
     }
-
-    // Mostrar lista al hacer hover o clic
-    &:hover .dropdown-content {
-      display: flex;
+    .footer-dropdown {
+        width: 100%;
+        background-color: #F5EBDC;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: $background;
+        text-align: center;
+        cursor: pointer;
+        .dropdown-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
+            ul {
+                display: flex;
+                justify-content: space-around;
+                list-style: none;
+                padding: 0;
+                li {
+                    font-size: 1rem;
+                    color: $primary-color;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        // Mostrar lista al hacer hover o clic
+        &:hover .dropdown-content {
+            display: flex;
+        }
     }
-  }
-
-  .footer-bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #502314;
-    padding: 10px;
-    text-align: center;
-
-    .contact {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      font-size: 12px;
-      color: $text;
-
-      img {
-        width: 35px;
-        height: 35px;
-        margin-right: 2%;
-      }
+    .footer-bottom {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #502314;
+        padding: 10px;
+        text-align: center;
+        .contact {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: $text;
+            img {
+                width: 35px;
+                height: 35px;
+                margin-right: 2%;
+            }
+        }
+        .rights {
+            margin-top: 20px;
+            font-size: 12px;
+            color: $text;
+        }
+        .social-media {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            img {
+                width: 35px;
+                height: 35px;
+            }
+            .social-icon {
+                display: inline-block;
+                margin: 0 5px;
+                background-size: cover;
+            }
+            a {
+                display: inline-block;
+            }
+        }
     }
-
-    .rights {
-      margin-top: 20px;
-      font-size: 12px;
-      color: $text;
-    }
-
-    .social-media {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-
-      img {
-        width: 35px;
-        height: 35px;
-      }
-
-      .social-icon {
-        display: inline-block;
-        margin: 0 5px;
-        background-size: cover;
-      }
-
-      a {
-        display: inline-block;
-      }
-    }
-  }
 }
 
 // Media Queries para pantallas pequeñas
 @media (max-width: 768px) {
-  .footer {
-    .footer-container {
-      padding: 20px; /* Menos espacio en pantallas pequeñas */
+    .footer {
+        .footer-container {
+            padding: 20px;
+            /* Menos espacio en pantallas pequeñas */
+        }
+        .footer-links__container {
+            justify-content: flex-start;
+            /* Alineación a la izquierda cuando es necesario */
+            gap: 10px;
+        }
+        .footer-bottom {
+            flex-direction: column;
+            /* Apilar los elementos en pantallas pequeñas */
+            align-items: center;
+        }
+        .contact,
+        .rights,
+        .social-media {
+            font-size: 14px;
+            /* Ajuste de tamaño de fuente para pantallas pequeñas */
+        }
     }
-
-    .footer-links__container {
-      justify-content: flex-start; /* Alineación a la izquierda cuando es necesario */
-      gap: 10px;
-    }
-
-    .footer-bottom {
-      flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
-      align-items: center;
-    }
-
-    .contact,
-    .rights,
-    .social-media {
-      font-size: 14px; /* Ajuste de tamaño de fuente para pantallas pequeñas */
-    }
-  }
 }

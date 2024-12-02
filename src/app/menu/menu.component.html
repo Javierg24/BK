@@ -1,25 +1,27 @@
 <div class="menu-container">
-  <h1>Menú de la Casa</h1>
 
   <!-- Lista de Categorías -->
   <div class="categorias">
     <ul>
-      <li
-        *ngFor="let categoria of categorias"
-        (click)="seleccionarCategoria(categoria.nombre)"
+      <li *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria.nombre)"
         [class.selected]="categoriaSeleccionada === categoria.nombre">
-        <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}">
-        {{ categoria.nombre }}
+        <div class="imagen">
+          <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}">
+        </div>
+        <p>{{ categoria.nombre }}</p>
       </li>
     </ul>
   </div>
 
+  <a class="backArrow" routerLink="/carta"><img src="../../assets/img/ico-arrow.c3dd4130664987ba.svg"></a>
+
   <!-- Productos de la Categoría Seleccionada -->
   <div class="productos" *ngIf="productos.length > 0">
     <div class="producto" *ngFor="let producto of productos">
-      <h4>{{ producto.nombre }}</h4>
-      <p>{{ producto.descripcion }}</p>
-      <p><strong>Precio:</strong> {{ producto.precio | currency: 'EUR' }}</p>
+      <div class="imagen">
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+      </div>
+      <p>{{ producto.nombre }}</p>
     </div>
   </div>
 

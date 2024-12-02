@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carta',
@@ -21,4 +22,11 @@ export class CartaComponent {
     { nombre: 'Bebidas', foto: '../../assets/img/carta/bebidas.png' },
     { nombre: 'Ensaladas', foto: '../../assets/img/carta/ensaladas.png' }
   ];
+
+  constructor(private router: Router) {}
+
+  seleccionarCategoria(categoria: string): void {
+    // Redirige al componente MenuComponent pasando la categoría como parámetro
+    this.router.navigate(['../menu', categoria]);
+  }
 }

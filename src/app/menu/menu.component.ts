@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -16,112 +17,119 @@ export class MenuComponent implements OnInit {
       nombre: "Novedades",
       foto: '../../assets/img/carta/novedades.png',
       productos: [
-        { nombre: "Big King", descripcion: "Hamburguesa doble con salsa especial y queso.", precio: 5.99 },
-        { nombre: "BK Melt", descripcion: "Hamburguesa con queso y cebolla caramelizada.", precio: 6.49 }
+        { nombre: "MENÚ KING DABIZ II CARNE", imagen: '../../assets/img/productos/' },
+        { nombre: "GOUDA RINGS", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Menú Parrilla",
       foto: '../../assets/img/carta/whopper2.png',
       productos: [
-        { nombre: "Whopper", descripcion: "Hamburguesa a la parrilla con vegetales frescos.", precio: 6.99 },
-        { nombre: "Double Whopper", descripcion: "Versión doble del clásico Whopper.", precio: 7.99 }
+        { nombre: "Whopper", imagen: '../../assets/img/productos/whopper2.png' },
+        { nombre: "Double Whopper", imagen: '../../assets/img/productos/dobleWhopper.jpg' }
       ]
     },
     {
       nombre: "Menú de Pollo",
       foto: '../../assets/img/carta/pollo.png',
       productos: [
-        { nombre: "Crispy Chicken", descripcion: "Hamburguesa de pollo crujiente con lechuga y mayonesa.", precio: 5.49 },
-        { nombre: "Chicken Royale", descripcion: "Pollo empanado con lechuga y salsa especial.", precio: 5.99 }
+        { nombre: "Crispy Chicken", imagen: '../../assets/img/productos/'},
+        { nombre: "Chicken Royale", imagen: '../../assets/img/productos/'}
       ]
     },
     {
       nombre: "King Jr",
       foto: '../../assets/img/carta/KingJR2.png',
       productos: [
-        { nombre: "Hamburguesa King Jr", descripcion: "Hamburguesa pequeña para niños con queso y ketchup.", precio: 3.99 },
-        { nombre: "Nuggets King Jr", descripcion: "6 nuggets de pollo con patatas y bebida.", precio: 4.49 }
+        { nombre: "Hamburguesa King Jr", imagen: '../../assets/img/productos/' },
+        { nombre: "Nuggets King Jr", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "100% Vegetariano",
       foto: '../../assets/img/carta/vegano.png',
       productos: [
-        { nombre: "Plant-Based Whopper", descripcion: "Whopper elaborado con carne vegetal.", precio: 6.99 },
-        { nombre: "Vegan Royale", descripcion: "Versión vegana del clásico Chicken Royale.", precio: 5.99 }
+        { nombre: "Plant-Based Whopper", imagen: '../../assets/img/productos/'},
+        { nombre: "Vegan Royale", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Sin gluten",
       foto: '../../assets/img/carta/singluten.png',
       productos: [
-        { nombre: "Whopper sin gluten", descripcion: "Versión sin gluten del clásico Whopper.", precio: 7.49 },
-        { nombre: "Chicken Royale sin gluten", descripcion: "Hamburguesa de pollo apta para celíacos.", precio: 6.49 }
+        { nombre: "Whopper sin gluten", imagen: '../../assets/img/productos/'},
+        { nombre: "Chicken Royale sin gluten", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Hamburguesas",
       foto: '../../assets/img/carta/Burguirs.png',
       productos: [
-        { nombre: "Cheeseburger", descripcion: "Hamburguesa con queso y ketchup.", precio: 2.99 },
-        { nombre: "Bacon King", descripcion: "Hamburguesa con bacon crujiente y queso.", precio: 6.99 }
+        { nombre: "Cheeseburger", imagen: '../../assets/img/productos/' },
+        { nombre: "Bacon King", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Complementos",
       foto: '../../assets/img/carta/Complementos.png',
       productos: [
-        { nombre: "Patatas fritas", descripcion: "Crujientes y doradas patatas fritas.", precio: 2.49 },
-        { nombre: "Aros de cebolla", descripcion: "Aros de cebolla rebozados y crujientes.", precio: 2.99 }
+        { nombre: "Patatas fritas", imagen: '../../assets/img/productos/'},
+        { nombre: "Aros de cebolla", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Postres",
       foto: '../../assets/img/carta/postres.png',
       productos: [
-        { nombre: "Sundae de chocolate", descripcion: "Helado con salsa de chocolate.", precio: 2.99 },
-        { nombre: "Tarta de manzana", descripcion: "Deliciosa tarta caliente de manzana.", precio: 1.99 }
+        { nombre: "Sundae de chocolate", imagen: '../../assets/img/productos/' },
+        { nombre: "Tarta de manzana", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "King Ahorro",
       foto: '../../assets/img/carta/kingahorro.png',
       productos: [
-        { nombre: "Hamburguesa doble", descripcion: "Pequeña hamburguesa con doble carne y queso.", precio: 1.99 },
-        { nombre: "Nuggets", descripcion: "6 nuggets con salsa.", precio: 2.49 }
+        { nombre: "Hamburguesa doble", imagen: '../../assets/img/productos/' },
+        { nombre: "Nuggets", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Salsas",
       foto: '../../assets/img/carta/salsas.png',
       productos: [
-        { nombre: "Salsa BBQ", descripcion: "Clásica salsa barbacoa.", precio: 0.49 },
-        { nombre: "Salsa Curry", descripcion: "Salsa con un toque exótico de curry.", precio: 0.49 }
+        { nombre: "Salsa BBQ", imagen: '../../assets/img/productos/' },
+        { nombre: "Salsa Curry", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Bebidas",
       foto: '../../assets/img/carta/bebidas.png',
       productos: [
-        { nombre: "Coca-Cola", descripcion: "Refresco de cola clásico.", precio: 2.49 },
-        { nombre: "Agua mineral", descripcion: "Botella de agua fresca.", precio: 1.99 }
+        { nombre: "Coca-Cola", imagen: '../../assets/img/productos/'},
+        { nombre: "Agua mineral", imagen: '../../assets/img/productos/' }
       ]
     },
     {
       nombre: "Ensaladas",
       foto: '../../assets/img/carta/ensaladas.png',
       productos: [
-        { nombre: "Ensalada César", descripcion: "Ensalada con lechuga, croutons y salsa César.", precio: 4.99 },
-        { nombre: "Ensalada mixta", descripcion: "Lechuga, tomate, zanahoria y maíz.", precio: 3.99 }
+        { nombre: "Ensalada César", imagen: '../../assets/img/productos/'},
+        { nombre: "Ensalada mixta", imagen: '../../assets/img/productos/'}
       ]
     }
   ];
 
+  constructor(private route: ActivatedRoute) {}
+
   ngOnInit(): void {
-    // Inicializamos las categorías desde el array
     this.categorias = this.data;
-    this.productos = []; // Inicialmente sin productos seleccionados
+
+    // Captura el parámetro de la URL
+    const categoria = this.route.snapshot.paramMap.get('categoria');
+    if (categoria) {
+      this.categoriaSeleccionada = categoria;
+      this.cargarProductos(categoria);
+    }
   }
 
   seleccionarCategoria(nombreCategoria: string): void {
@@ -131,5 +139,10 @@ export class MenuComponent implements OnInit {
       this.productos = categoria.productos;
       this.categoriaSeleccionada = nombreCategoria;
     }
+  }
+
+  cargarProductos(nombreCategoria: string): void {
+    const categoria = this.categorias.find(cat => cat.nombre === nombreCategoria);
+    this.productos = categoria ? categoria.productos : [];
   }
 }

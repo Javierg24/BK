@@ -10,15 +10,11 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'carta', component: CartaComponent },
-  { path: 'menu', component: MenuComponent }
+  { path: 'menu/:categoria', component: MenuComponent } // Agregamos ruta con parámetro para categorías
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
-export class AppRoutingModule {
-
-
-}
+export class AppRoutingModule {}
