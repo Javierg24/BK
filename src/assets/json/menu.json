@@ -6,11 +6,13 @@
       "productos": [
         {
           "nombre": "MENÚ KING DABIZ II CARNE",
-          "imagen": "../../assets/img/productos/Burguirs.png"
+          "imagen": "../../assets/img/productos/Burguirs.png",
+          "descripcion": "Un delicioso menú con una hamburguesa exclusiva de carne, creada por el chef Dabiz Muñoz."
         },
         {
           "nombre": "GOUDA RINGS",
-          "imagen": "../../assets/img/productos/GoudaRings.png"
+          "imagen": "../../assets/img/productos/GoudaRings.png",
+          "descripcion": "Crujientes aros de queso gouda, perfectos para acompañar tus comidas."
         }
       ]
     },
@@ -20,11 +22,13 @@
       "productos": [
         {
           "nombre": "WHOPPER",
-          "imagen": "../../assets/img/productos/whopper2.png"
+          "imagen": "../../assets/img/productos/whopper2.png",
+          "descripcion": "La clásica hamburguesa a la parrilla con todos los ingredientes que amas."
         },
         {
           "nombre": "DOBLE WHOPPER",
-          "imagen": "../../assets/img/productos/dobleWhopper.jpg"
+          "imagen": "../../assets/img/productos/dobleWhopper.jpg",
+          "descripcion": "Dos porciones de carne a la parrilla para los verdaderos amantes del sabor intenso."
         }
       ]
     },
@@ -34,11 +38,13 @@
       "productos": [
         {
           "nombre": "MENÚ CRISPY CHICKEN",
-          "imagen": "../../assets/img/productos/pollo.png"
+          "imagen": "../../assets/img/productos/pollo.png",
+          "descripcion": "Jugosa pechuga de pollo empanizada, servida con papas y bebida."
         },
         {
           "nombre": "Menú LONG CHICKEN",
-          "imagen": "../../assets/img/productos/LongChicken.png"
+          "imagen": "../../assets/img/productos/LongChicken.png",
+          "descripcion": "Deliciosa hamburguesa de pollo en pan alargado, perfecta para cualquier ocasión."
         }
       ]
     },
@@ -48,11 +54,13 @@
       "productos": [
         {
           "nombre": "HAMBURGEUSA KING JR",
-          "imagen": "../../assets/img/productos/BurguerKingJR.png"
+          "imagen": "../../assets/img/productos/BurguerKingJR.png",
+          "descripcion": "Una hamburguesa pequeña y deliciosa, ideal para los más pequeños de la casa."
         },
         {
           "nombre": "NUGGETS KING JR",
-          "imagen": "../../assets/img/productos/NuggetsKingJR.png"
+          "imagen": "../../assets/img/productos/NuggetsKingJR.png",
+          "descripcion": "Tiernos nuggets de pollo, perfectos para los niños."
         }
       ]
     },
@@ -62,11 +70,13 @@
       "productos": [
         {
           "nombre": "WHOPPER VEGETAL",
-          "imagen": "../../assets/img/productos/whopperVegi.png"
+          "imagen": "../../assets/img/productos/whopperVegi.png",
+          "descripcion": "La clásica hamburguesa Whopper, ahora con un delicioso sabor vegetal."
         },
         {
           "nombre": "MENÚ LONG VEGETAL",
-          "imagen": "../../assets/img/productos/MenuLongVegetal.png"
+          "imagen": "../../assets/img/productos/MenuLongVegetal.png",
+          "descripcion": "Hamburguesa vegetal en pan alargado, acompañada de papas y bebida."
         }
       ]
     },
@@ -76,11 +86,13 @@
       "productos": [
         {
           "nombre": "MENÚ WHOPPER SIN GLUTEN",
-          "imagen": "../../assets/img/productos/WhopperSG.png"
+          "imagen": "../../assets/img/productos/WhopperSG.png",
+          "descripcion": "Disfruta del sabor del Whopper sin preocuparte por el gluten."
         },
         {
           "nombre": "PATATAS SIN GLUTEN",
-          "imagen": "../../assets/img/productos/patatasSG.png"
+          "imagen": "../../assets/img/productos/patatasSG.png",
+          "descripcion": "Las clásicas papas fritas, ahora libres de gluten."
         }
       ]
     },
@@ -90,11 +102,13 @@
       "productos": [
         {
           "nombre": "WHOPPER VEGETAL",
-          "imagen": "../../assets/img/productos/whopperVegi.png"
+          "imagen": "../../assets/img/productos/whopperVegi.png",
+          "descripcion": "La opción vegetariana para disfrutar de una hamburguesa deliciosa."
         },
         {
           "nombre": "LONG VEGETAL",
-          "imagen": "../../assets/img/productos/MenuLongVegetal.png"
+          "imagen": "../../assets/img/productos/MenuLongVegetal.png",
+          "descripcion": "Una hamburguesa vegetal en pan alargado con un sabor increíble."
         }
       ]
     },
@@ -104,11 +118,13 @@
       "productos": [
         {
           "nombre": "PATATAS SIN GLUTEN",
-          "imagen": "../../assets/img/productos/patatasSG.png"
+          "imagen": "../../assets/img/productos/patatasSG.png",
+          "descripcion": "Acompaña tus comidas con estas crujientes papas libres de gluten."
         },
         {
           "nombre": "GOUDA RINGS",
-          "imagen": "../../assets/img/productos/GoudaRings.png"
+          "imagen": "../../assets/img/productos/GoudaRings.png",
+          "descripcion": "Deliciosos aros de queso gouda, dorados y crujientes."
         }
       ]
     },
@@ -118,11 +134,13 @@
       "productos": [
         {
           "nombre": "KING FUSION",
-          "imagen": "../../assets/img/carta/postres.png"
+          "imagen": "../../assets/img/carta/postres.png",
+          "descripcion": "Un postre helado con toppings irresistibles."
         },
         {
           "nombre": "GOFRE",
-          "imagen": "../../assets/img/productos/gofre.png"
+          "imagen": "../../assets/img/productos/gofre.png",
+          "descripcion": "Un gofre recién hecho, ideal para los amantes de lo dulce."
         }
       ]
     },
@@ -132,11 +150,13 @@
       "productos": [
         {
           "nombre": "Hamburguesa doble",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Una hamburguesa doble al mejor precio."
         },
         {
           "nombre": "Nuggets",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Un paquete de nuggets deliciosos y económicos."
         }
       ]
     },
@@ -146,11 +166,13 @@
       "productos": [
         {
           "nombre": "Salsa BBQ",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Salsa barbacoa con un sabor ahumado y dulce."
         },
         {
           "nombre": "Salsa Curry",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Salsa de curry con un toque especiado y exótico."
         }
       ]
     },
@@ -160,11 +182,13 @@
       "productos": [
         {
           "nombre": "Coca-Cola",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "El refresco clásico que nunca pasa de moda."
         },
         {
           "nombre": "Agua mineral",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Agua pura y refrescante para hidratarte en cualquier momento."
         }
       ]
     },
@@ -174,13 +198,16 @@
       "productos": [
         {
           "nombre": "Ensalada César",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Una ensalada fresca con lechuga, crutones y aderezo César."
         },
         {
           "nombre": "Ensalada mixta",
-          "imagen": "../../assets/img/productos/"
+          "imagen": "../../assets/img/productos/",
+          "descripcion": "Una mezcla saludable de vegetales frescos."
         }
       ]
     }
   ]
 }
+

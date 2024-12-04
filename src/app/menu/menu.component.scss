@@ -150,3 +150,80 @@ $secondary-color: #502134;
     font-size: 16px;
   }
 }
+
+.producto-detalle {
+  width: 100%;
+  text-align: justify;
+  background-color: #69402c08;
+  display: flex;
+  flex-direction: column; // Organiza los elementos verticalmente
+  align-items: center; // Centra horizontalmente los elementos
+
+  .backarrow {
+    position: absolute; // Coloca el botón de regreso en la esquina superior izquierda
+    top: 10px;
+    left: 10px;
+    display: inline-flex;
+    cursor: pointer;
+
+    .imagen {
+      width: 30px;
+      height: 30px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  .imagen {
+    width: 50%; // Reduce el ancho de la imagen al 50%
+    margin: 20px auto; // Centra la imagen
+    height: auto; // Mantén la proporción
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%; // Asegura que la imagen ocupe todo el contenedor
+      height: auto;
+    }
+  }
+
+  h1 {
+    color: #502134;
+    font-family: "FlameBold";
+    font-size: 2rem;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 10px 20px; // Márgenes horizontales y verticales
+    text-align: center;
+  }
+
+  button {
+    background-color: #ff8732;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: darken(#502134, 10%);
+    }
+  }
+}
+

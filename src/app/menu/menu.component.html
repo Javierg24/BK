@@ -1,37 +1,58 @@
 <div class="menu-container">
-  <!-- Lista de Categorías con scroll horizontal -->
-  <div class="categorias-wrapper"
-  #categoriasWrapper
-  (mousedown)="onMouseDown($event)"
-  (mouseleave)="onMouseLeave()"
-  (mouseup)="onMouseUp()"
-  (mousemove)="onMouseMove($event)">
-  <div class="categorias">
-    <ul>
-      <li *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria.nombre)"
-        [class.selected]="categoriaSeleccionada === categoria.nombre">
-        <div class="imagen">
-          <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}" draggable="false">
-        </div>
-        <p>{{ categoria.nombre }}</p>
-      </li>
-    </ul>
+  <!-- Categorías con scroll horizontal -->
+  <div
+    class="categorias-wrapper"
+    #categoriasWrapper
+    (mousedown)="onMouseDown($event)"
+    (mouseleave)="onMouseLeave()"
+    (mouseup)="onMouseUp()"
+    (mousemove)="onMouseMove($event)"
+  >
+    <div class="categorias">
+      <ul>
+        <li
+          *ngFor="let categoria of categorias"
+          (click)="seleccionarCategoria(categoria.nombre)"
+          [class.selected]="categoriaSeleccionada === categoria.nombre"
+        >
+          <div class="imagen">
+            <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}" draggable="false">
+          </div>
+          <p>{{ categoria.nombre }}</p>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
-  <a class="backarrow" routerLink="/carta"><img src="../../assets/img/ico-arrow.c3dd4130664987ba.svg"></a>
+  <!-- Mostrar producto seleccionado -->
+  <div *ngIf="productoSeleccionado" class="producto-detalle">
+    <a class="backarrow" (click)="regresarAProductos()">
+      <img src="../../assets/img/ico-arrow.c3dd4130664987ba.svg" />
+    </a>
+    <div>
+      <img [src]="productoSeleccionado.imagen" alt="{{ productoSeleccionado.nombre }}" />
+    </div>
+    <h1>{{ productoSeleccionado.nombre }}</h1>
+    <p>{{ productoSeleccionado.descripcion }}</p>
+    <button>INICIAR PEDIDO</button>
+  </div>
 
-  <div class="productos" *ngIf="productos.length > 0">
-    <div class="producto" *ngFor="let producto of productos">
+  <!-- Mostrar lista de productos -->
+  <div class="productos" *ngIf="!productoSeleccionado && productos.length > 0">
+    <div
+      class="producto"
+      *ngFor="let producto of productos"
+      (click)="seleccionarProducto(producto)"
+    >
       <div class="imagen">
-        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+        <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" />
       </div>
       <p>{{ producto.nombre }}</p>
     </div>
   </div>
 
-  <div [ngClass]="{'productos': productos.length === 0 && categoriaSeleccionada}">
+  <!-- Mensaje de error si no hay productos -->
+  <div *ngIf="!productoSeleccionado" [ngClass]="{'productos': productos.length === 0 && categoriaSeleccionada}">
     <p *ngIf="productos.length === 0 && categoriaSeleccionada">No hay productos disponibles en esta categoría.</p>
   </div>
-
 </div>

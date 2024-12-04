@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import menu from '../../../src/assets/json/menu.json'; // Importa directamente el JSON
 
 @Component({
@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   categorias: any[] = [];
   productos: any[] = [];
   categoriaSeleccionada: string = '';
+  productoSeleccionado: any | null = null; // Nuevo: Producto seleccionado
 
   @ViewChild('categoriasWrapper') categoriasWrapper!: ElementRef;
 
@@ -19,7 +20,7 @@ export class MenuComponent implements OnInit {
   startX = 0;
   scrollLeft = 0;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     // Asigna directamente las categorías desde el JSON importado
@@ -44,6 +45,14 @@ export class MenuComponent implements OnInit {
   cargarProductos(nombreCategoria: string): void {
     const categoria = this.categorias.find(cat => cat.nombre === nombreCategoria);
     this.productos = categoria ? categoria.productos : [];
+  }
+
+  seleccionarProducto(producto: any): void {
+    this.productoSeleccionado = producto; // Guardamos el producto seleccionado
+  }
+
+  regresarAProductos(): void {
+    this.productoSeleccionado = null; // Vuelve a la vista de productos
   }
 
   onMouseDown(event: MouseEvent | TouchEvent): void {
