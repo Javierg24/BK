@@ -1,19 +1,25 @@
 <div class="menu-container">
-
-  <!-- Lista de Categorías -->
+  <!-- Lista de Categorías con scroll horizontal -->
+  <div class="categorias-wrapper"
+  #categoriasWrapper
+  (mousedown)="onMouseDown($event)"
+  (mouseleave)="onMouseLeave()"
+  (mouseup)="onMouseUp()"
+  (mousemove)="onMouseMove($event)">
   <div class="categorias">
     <ul>
       <li *ngFor="let categoria of categorias" (click)="seleccionarCategoria(categoria.nombre)"
         [class.selected]="categoriaSeleccionada === categoria.nombre">
         <div class="imagen">
-          <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}">
+          <img src="{{ categoria.foto }}" alt="{{ categoria.nombre }}" draggable="false">
         </div>
         <p>{{ categoria.nombre }}</p>
       </li>
     </ul>
   </div>
+</div>
 
-  <a class="backArrow" routerLink="/carta"><img src="../../assets/img/ico-arrow.c3dd4130664987ba.svg"></a>
+  <a class="backarrow" routerLink="/carta"><img src="../../assets/img/ico-arrow.c3dd4130664987ba.svg"></a>
 
   <!-- Productos de la Categoría Seleccionada -->
   <div class="productos" *ngIf="productos.length > 0">
