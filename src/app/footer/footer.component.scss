@@ -19,12 +19,9 @@ $text-muted: #888888; // Separador y texto apagado
         .footer-links__container {
             display: flex;
             flex-wrap: wrap;
-            /* Permite que los enlaces se envuelvan en pantallas pequeñas */
             justify-content: center;
-            /* Asegura que los enlaces estén centrados */
             gap: 15px;
             margin-bottom: 20px;
-            /* Un poco de espacio debajo */
             .footer-link {
                 font-weight: bold;
                 font-size: 18px;

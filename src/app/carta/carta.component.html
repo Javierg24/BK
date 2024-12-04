@@ -1,7 +1,7 @@
 <div class="carta">
     <h1>Hola, ¿qué quieres comer hoy?</h1>
     <div class="menu-container">
-        <div *ngFor="let item of menuItems" class="menu-item" (click)="seleccionarCategoria(item.nombre)">
+        <div *ngFor="let item of MenuBK" class="menu-item" (click)="seleccionarCategoria(item.nombre)">
             <div class="menu-item-image">
                 <img [src]="item.foto" alt="{{ item.nombre }}">
             </div>

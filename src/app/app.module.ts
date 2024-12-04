@@ -10,6 +10,8 @@ import { DestacadosComponent } from './destacados/destacados.component';
 import { CartaComponent } from './carta/carta.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
+import { SliderComponent } from './slider/slider.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { MenuComponent } from './menu/menu.component';
     DestacadosComponent,
     CartaComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    SliderComponent,
+    BusquedaComponent,
   ],
   imports: [
     BrowserModule,

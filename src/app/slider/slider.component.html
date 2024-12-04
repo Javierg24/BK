@@ -1,0 +1,19 @@
+<div class="slider">
+  <!-- Imagen Actual -->
+  <div class="imagen-container">
+    <img [src]="fotos[fotoActual]" alt="Foto del slider" draggable="false">
+  </div>
+
+  <!-- Indicadores y Texto -->
+  <div class="indicadores-container">
+    <div class="indicadores">
+      <span *ngFor="let foto of fotos; let i = index"
+            [class.active]="i === fotoActual"
+            (click)="irAFoto(i)">
+      </span>
+    </div>
+    <div class="texto">
+      <p *ngIf="textos[fotoActual]" class="texto-animado">{{ textos[fotoActual] }}</p>
+    </div>
+  </div>
+</div>

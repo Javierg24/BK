@@ -1,0 +1,63 @@
+.slider {
+  position: relative;
+  width: 100%; // Ancho completo
+  height: 50vh; // Altura del slider ajustable
+  overflow: hidden;
+
+  .imagen-container {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Asegura que la imagen se recorte correctamente
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+
+    &.anterior {
+      left: 10px;
+    }
+
+    &.siguiente {
+      right: 10px;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.active {
+        background-color: #fff;
+      }
+    }
+  }
+}

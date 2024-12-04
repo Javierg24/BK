@@ -21,7 +21,6 @@
 
   <a class="backarrow" routerLink="/carta"><img src="../../assets/img/ico-arrow.c3dd4130664987ba.svg"></a>
 
-  <!-- Productos de la Categoría Seleccionada -->
   <div class="productos" *ngIf="productos.length > 0">
     <div class="producto" *ngFor="let producto of productos">
       <div class="imagen">
@@ -31,7 +30,8 @@
     </div>
   </div>
 
-  <div class="productos" *ngIf="productos.length === 0 && categoriaSeleccionada">
-    <p>No hay productos disponibles en esta categoría.</p>
+  <div [ngClass]="{'productos': productos.length === 0 && categoriaSeleccionada}">
+    <p *ngIf="productos.length === 0 && categoriaSeleccionada">No hay productos disponibles en esta categoría.</p>
   </div>
+
 </div>

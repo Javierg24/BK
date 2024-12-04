@@ -4,6 +4,7 @@
   width: 100%;
   margin-top: auto;
 }
+
 .footer .footer-container {
   display: flex;
   flex-direction: column;
@@ -12,13 +13,15 @@
   padding: 32px 24px;
   color: #F5EBDC;
 }
+
 .footer .footer-container .footer-links__container {
   display: flex;
-  flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
-  justify-content: center; /* Asegura que los enlaces estén centrados */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  margin-bottom: 20px; /* Un poco de espacio debajo */
+  margin-bottom: 20px;
 }
+
 .footer .footer-container .footer-links__container .footer-link {
   font-weight: bold;
   font-size: 18px;
@@ -26,16 +29,19 @@
   text-decoration: none;
   position: relative;
 }
+
 .footer .footer-container .footer-links__container .footer-link:not(:last-child)::after {
   content: " | ";
   color: #888888;
   margin-left: 5px;
   font-weight: bold;
 }
+
 .footer .footer-container .footer-links__container .footer-link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
 .footer .footer-dropdown {
   width: 100%;
   background-color: #F5EBDC;
@@ -45,39 +51,46 @@
   text-align: center;
   cursor: pointer;
 }
+
 .footer .footer-dropdown .dropdown-header {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .footer .footer-dropdown .dropdown-content {
   display: none;
   margin-top: 10px;
 }
+
 .footer .footer-dropdown .dropdown-content ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
   padding: 0;
 }
+
 .footer .footer-dropdown .dropdown-content ul li {
   font-size: 1rem;
   color: #FF5733;
 }
+
 .footer .footer-dropdown .dropdown-content ul li:hover {
   text-decoration: underline;
 }
+
 .footer .footer-dropdown:hover .dropdown-content {
   display: flex;
 }
+
 .footer .footer-bottom {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #502314;
   padding: 10px;
   text-align: center;
 }
+
 .footer .footer-bottom .contact {
   margin-top: 10px;
   display: flex;
@@ -86,50 +99,60 @@
   font-size: 12px;
   color: #F5EBDC;
 }
+
 .footer .footer-bottom .contact img {
   width: 35px;
   height: 35px;
   margin-right: 2%;
 }
+
 .footer .footer-bottom .rights {
   margin-top: 20px;
   font-size: 12px;
   color: #F5EBDC;
 }
+
 .footer .footer-bottom .social-media {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
+
 .footer .footer-bottom .social-media img {
   width: 35px;
   height: 35px;
 }
+
 .footer .footer-bottom .social-media .social-icon {
   display: inline-block;
   margin: 0 5px;
   background-size: cover;
 }
+
 .footer .footer-bottom .social-media a {
   display: inline-block;
 }
 
 @media (max-width: 768px) {
   .footer .footer-container {
-    padding: 20px; /* Menos espacio en pantallas pequeñas */
+    padding: 20px;
+    /* Menos espacio en pantallas pequeñas */
   }
   .footer .footer-links__container {
-    justify-content: flex-start; /* Alineación a la izquierda cuando es necesario */
+    justify-content: flex-start;
+    /* Alineación a la izquierda cuando es necesario */
     gap: 10px;
   }
   .footer .footer-bottom {
-    flex-direction: column; /* Apilar los elementos en pantallas pequeñas */
+    flex-direction: column;
+    /* Apilar los elementos en pantallas pequeñas */
     align-items: center;
   }
   .footer .contact,
   .footer .rights,
   .footer .social-media {
-    font-size: 14px; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+    font-size: 14px;
+    /* Ajuste de tamaño de fuente para pantallas pequeñas */
   }
-}/*# sourceMappingURL=footer.component.css.map */
+}
