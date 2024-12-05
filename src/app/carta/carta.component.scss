@@ -5,6 +5,7 @@ $secondary-color: #502134;
 
 
 .carta {
+    min-height: 100vh;
     margin-top: 170px;
     padding: 20px;
     background-color: white;
@@ -25,6 +26,7 @@ $secondary-color: #502134;
 
 .menu-container {
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
     width: 90%;
     margin-left: 10%;
@@ -59,8 +61,7 @@ $secondary-color: #502134;
             width: 96%;
             background-color: #fff;
             padding: 10px;
-            font-family: "FlameSans";
-            font-weight: bold;
+            font-family: "FlameRegular", sans-serif;
             font-size: 16px;
             color: $secondary-color;
             text-transform: capitalize;

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Variables */
 .carta {
+  min-height: 100vh;
   margin-top: 170px;
   padding: 20px;
   background-color: white;
@@ -20,8 +21,9 @@
 
 .menu-container {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
-  width: 80%;
+  width: 90%;
   margin-left: 10%;
   gap: 20px;
 }
@@ -45,7 +47,6 @@
   margin-left: 10%;
   width: 80%;
   height: 80%;
-  background-color: #F5EBDC;
   transition: transform 0.3s ease;
 }
 
@@ -61,8 +62,7 @@
   width: 96%;
   background-color: #fff;
   padding: 10px;
-  font-family: "FlameSans";
-  font-weight: bold;
+  font-family: "FlameRegular", sans-serif;
   font-size: 16px;
   color: #502134;
   text-transform: capitalize;

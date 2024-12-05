@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import menu from '../../../src/assets/json/menu.json'; // Importa directamente el JSON
+import menu from '../../../src/assets/json/menu.json';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   categorias: any[] = [];
   productos: any[] = [];
   categoriaSeleccionada: string = '';
-  productoSeleccionado: any | null = null; // Nuevo: Producto seleccionado
+  productoSeleccionado: any | null = null;
 
   @ViewChild('categoriasWrapper') categoriasWrapper!: ElementRef;
 
@@ -23,10 +23,7 @@ export class MenuComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
-    // Asigna directamente las categorías desde el JSON importado
     this.categorias = menu.categorias;
-
-    // Captura el parámetro de la URL
     const categoria = this.route.snapshot.paramMap.get('categoria');
     if (categoria) {
       this.categoriaSeleccionada = categoria;
@@ -48,11 +45,11 @@ export class MenuComponent implements OnInit {
   }
 
   seleccionarProducto(producto: any): void {
-    this.productoSeleccionado = producto; // Guardamos el producto seleccionado
+    this.productoSeleccionado = producto;
   }
 
   regresarAProductos(): void {
-    this.productoSeleccionado = null; // Vuelve a la vista de productos
+    this.productoSeleccionado = null;
   }
 
   onMouseDown(event: MouseEvent | TouchEvent): void {
@@ -66,7 +63,7 @@ export class MenuComponent implements OnInit {
     if (!this.isDragging) return;
     event.preventDefault();
     const x = event.pageX - this.categoriasWrapper.nativeElement.offsetLeft;
-    const walk = (x - this.startX) * 3; // Ajusta la velocidad del scroll
+    const walk = (x - this.startX) * 3; 
     this.categoriasWrapper.nativeElement.scrollLeft = this.scrollLeft - walk;
   }
 

@@ -2,9 +2,8 @@
 
 $primary-color: #F5EBDC;
 $secondary-color: #502134;
-$cta-bg-color: #D62300; // Fondo del botón de CTA
+$cta-bg-color: #D62300;
 
-/* Mixins */
 
 @mixin button-style($background-color, $color) {
     background-color: $background-color;
@@ -15,13 +14,11 @@ $cta-bg-color: #D62300; // Fondo del botón de CTA
 }
 
 
-/* Estilos generales para el contenedor */
 
 .login-container {
     display: flex;
     flex-direction: row;
     min-height: 100vh;
-    /* Asegura que el contenedor ocupa toda la altura de la ventana */
     background-color: $primary-color;
     padding-top: 150px;
     justify-content: space-between;
@@ -37,7 +34,6 @@ $cta-bg-color: #D62300; // Fondo del botón de CTA
 
 .login-image {
     flex: 1;
-    /* Ocupa el 50% del ancho */
     img {
         border-radius: 20px;
         margin-left: 20%;
@@ -147,7 +143,7 @@ $cta-bg-color: #D62300; // Fondo del botón de CTA
         margin-bottom: 2%;
         /* Agrega espacio entre los botones y los campos */
     }
-    /* La imagen ocupa el 80% de la pantalla en móviles */
+  
     .login-image img {
         width: 80%;
         margin-left: 10%;

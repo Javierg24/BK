@@ -1,7 +1,7 @@
 {
   "categorias": [
     {
-      "nombre": "Novedades",
+      "nombre": "NOVEDADES",
       "foto": "../../assets/img/carta/novedades.png",
       "productos": [
         {
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "nombre": "Menú Parrilla",
+      "nombre": "MENÚ PARRILLA",
       "foto": "../../assets/img/carta/whopper2.png",
       "productos": [
         {
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "nombre": "Menú de Pollo",
+      "nombre": "MENÚ POLLO",
       "foto": "../../assets/img/carta/pollo.png",
       "productos": [
         {
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "nombre": "King Jr",
+      "nombre": "KING JR",
       "foto": "../../assets/img/carta/KingJR2.png",
       "productos": [
         {
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "nombre": "100% Vegetariano",
+      "nombre": "100% VEGETARIANO",
       "foto": "../../assets/img/carta/vegano.png",
       "productos": [
         {
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "nombre": "Sin gluten",
+      "nombre": "SIN GLUTEN",
       "foto": "../../assets/img/carta/singluten.png",
       "productos": [
         {
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "nombre": "Hamburguesas",
+      "nombre": "HAMBURGUESAS",
       "foto": "../../assets/img/carta/Burguirs.png",
       "productos": [
         {
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "nombre": "Complementos",
+      "nombre": "COMPLMENTOS",
       "foto": "../../assets/img/carta/Complementos.png",
       "productos": [
         {
@@ -129,7 +129,7 @@
       ]
     },
     {
-      "nombre": "Postres",
+      "nombre": "POSTRES",
       "foto": "../../assets/img/carta/postres.png",
       "productos": [
         {
@@ -145,65 +145,65 @@
       ]
     },
     {
-      "nombre": "King Ahorro",
+      "nombre": "KING AHORRO",
       "foto": "../../assets/img/carta/kingahorro.png",
       "productos": [
         {
-          "nombre": "Hamburguesa doble",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "MENÚ KING AHORRO BACON LOVER DOBLE CHEESEBURGER",
+          "imagen": "../../assets/img/productos/KADobleBurg.png",
           "descripcion": "Una hamburguesa doble al mejor precio."
         },
         {
-          "nombre": "Nuggets",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "KING AHORRO MENÚ CHICKEN BURGER",
+          "imagen": "../../assets/img/productos/KAMCBurguer.png",
           "descripcion": "Un paquete de nuggets deliciosos y económicos."
         }
       ]
     },
     {
-      "nombre": "Salsas",
+      "nombre": "SALSAS",
       "foto": "../../assets/img/carta/salsas.png",
       "productos": [
         {
-          "nombre": "Salsa BBQ",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "SALSA BARBACOA",
+          "imagen": "../../assets/img/productos/Barbacoa.png",
           "descripcion": "Salsa barbacoa con un sabor ahumado y dulce."
         },
         {
-          "nombre": "Salsa Curry",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "SALSA MAYONESA",
+          "imagen": "../../assets/img/productos/Mayonesa.png",
           "descripcion": "Salsa de curry con un toque especiado y exótico."
         }
       ]
     },
     {
-      "nombre": "Bebidas",
+      "nombre": "BEBIDAS",
       "foto": "../../assets/img/carta/bebidas.png",
       "productos": [
         {
-          "nombre": "Coca-Cola",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "COCA-COLA",
+          "imagen": "../../assets/img/productos/CocaCola.png",
           "descripcion": "El refresco clásico que nunca pasa de moda."
         },
         {
-          "nombre": "Agua mineral",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "AGUA MINERAL",
+          "imagen": "../../assets/img/productos/AguaMineral.png",
           "descripcion": "Agua pura y refrescante para hidratarte en cualquier momento."
         }
       ]
     },
     {
-      "nombre": "Ensaladas",
+      "nombre": "ENSALADAS",
       "foto": "../../assets/img/carta/ensaladas.png",
       "productos": [
         {
-          "nombre": "Ensalada César",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "ENSALADA ORIGINAL",
+          "imagen": "../../assets/img/productos/EnsaladaOriginal.png",
           "descripcion": "Una ensalada fresca con lechuga, crutones y aderezo César."
         },
         {
-          "nombre": "Ensalada mixta",
-          "imagen": "../../assets/img/productos/",
+          "nombre": "ENSALADA KING CESAR",
+          "imagen": "../../assets/img/productos/EnsaladaCesar.png",
           "descripcion": "Una mezcla saludable de vegetales frescos."
         }
       ]

@@ -53,9 +53,10 @@ $cookie-bg-color: #FF5733; // Color del botón de cookies
 
   &__cta {
     margin-top: 5%;
+    margin-bottom: 5%;
     border: none;
     font-family: "FlameSans", sans-serif;
-    width: 28%;
+    width: 25%;
     display: flex;
     align-items: center;
     background-color: $cta-bg-color;
@@ -135,12 +136,6 @@ $cookie-bg-color: #FF5733; // Color del botón de cookies
       padding: 0.6rem 1rem;
       text-align: left;
       width: 100%;
-    }
-
-    &__cookie-btn {
-      bottom: 1rem;
-      left: 1rem;
-      font-size: 0.9rem;
     }
   }
 }

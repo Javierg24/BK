@@ -1,16 +1,14 @@
 @charset "UTF-8";
 /* Variables */
-/* Mixins */
-/* Estilos generales para el contenedor */
 .login-container {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  /* Asegura que el contenedor ocupa toda la altura de la ventana */
   background-color: #F5EBDC;
   padding-top: 150px;
   justify-content: space-between;
 }
+
 @media (max-width: 768px) {
   .login-container {
     flex-direction: column;
@@ -22,17 +20,17 @@
 /* Imagen */
 .login-image {
   flex: 1;
-  /* Ocupa el 50% del ancho */
 }
+
 .login-image img {
   border-radius: 20px;
   margin-left: 20%;
   margin-top: 10%;
   width: 60%;
   height: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 @media (max-width: 768px) {
   .login-image img {
     width: 80%;
@@ -49,18 +47,21 @@
   padding: 2rem;
   text-align: center;
 }
+
 .login-form h2 {
   font-family: "FlameBold";
   color: #502134;
   font-size: 24px;
   margin-bottom: 2%;
 }
+
 .login-form .social-login {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
+
 .login-form .social-login button {
   width: 70%;
   text-align: justify;
@@ -74,12 +75,15 @@
   border-radius: 24px, 24px, 24px, 24px;
   cursor: pointer;
 }
+
 .login-form .social-login button img {
   margin-right: 5px;
 }
+
 .login-form .email-login {
   margin-bottom: 2%;
 }
+
 .login-form .email-login input {
   width: 70%;
   padding: 2%;
@@ -87,6 +91,7 @@
   border: 1px solid #F5EBDC;
   border-radius: 24px;
 }
+
 .login-form .email-login button {
   width: 70%;
   margin-left: 15%;
@@ -99,22 +104,27 @@
   border-radius: 24px, 24px, 24px, 24px;
   cursor: pointer;
 }
+
 .login-form .email-login a {
   font-weight: bold;
   margin-top: 2%;
   color: #502134;
 }
+
 .login-form .slogan {
   margin-top: 20px;
   /* Margen para separar del contenido anterior */
 }
+
 .login-form .slogan h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
 .login-form .slogan p {
   margin-bottom: 20px;
 }
+
 .login-form .slogan button {
   border-radius: 24px;
   border-style: none;
@@ -143,9 +153,8 @@
     margin-bottom: 2%;
     /* Agrega espacio entre los botones y los campos */
   }
-  /* La imagen ocupa el 80% de la pantalla en móviles */
   .login-image img {
     width: 80%;
     margin-left: 10%;
   }
-}/*# sourceMappingURL=login.component.css.map */
+}
